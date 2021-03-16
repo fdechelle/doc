@@ -3,9 +3,7 @@ Configurer les composants
 
 Les composants ajoutés aux ordinateurs sont paramétrables.
 
-Un composant matériel est défini par un type, un nom, un fabricant, un commentaire, ainsi que plusieurs
-champs spécifiques au type de composant. Par exemple, pour une carte
-mère, on pourra y renseigner le chipset.
+Un composant matériel est défini par un type, un nom, un fabricant, un commentaire, ainsi que plusieurs champs spécifiques au type de composant. Par exemple, pour une carte mère, on pourra y renseigner le chipset.
 
 La liste des différents types de composant est fixe :
 
@@ -13,12 +11,9 @@ La liste des différents types de composant est fixe :
    :alt: Liste des types de composant
    :align: center
 
-.. note::
-   Il est possible de renseigner d'autres types de composants à l'intérieur du type *Autres composants*.
-   Il n'est cependant pas possible d'ajouter d'autres types que ceux listés ici.
+.. note:: Il est possible de renseigner d'autres types de composants à l'intérieur du type *Autres composants*.  Il n'est cependant pas possible d'ajouter d'autres types que ceux listés ici.
 
-Une fois un type de composant sélectionné (*Carte mère*, *Processeur*...), on accède automatiquement à la liste
-des composants déjà enregistrés.
+Une fois un type de composant sélectionné (*Carte mère*, *Processeur*...), on accède automatiquement à la liste des composants déjà enregistrés.
 
 .. image:: images/component_list.png
    :alt: Liste des composants
@@ -32,11 +27,12 @@ Principal
 
 Informations qui définissent un composant matériel (informations différentes en fonction du type de composant).
 
-Exemple pour un Processeur :
-
-.. image:: images/component_details.png
+.. figure:: images/component_details.png
    :alt: Détail d'un composant de type processeur
    :align: center
+
+   Exemple pour un Processeur
+
 
 Éléments
 ~~~~~~~~
@@ -67,8 +63,7 @@ Les informations suivantes seront affichés :
       *  :doc:`Onglet "Documents" <../tabs/documents>`
       *  :doc:`Onglet "Historique" <../tabs/historical>`
       *  :doc:`Onglet "Debug" <../tabs/debug>` : uniquement si vous êtes connecté en mode Debug.
-      *  :doc:`Onglet "Tous" <../tabs/all>` : pour un élément, toutes les informations sont affichées sur une
-         seule page.
+      * :doc:`Onglet "Tous" <../tabs/all>` : pour un élément, toutes les informations sont affichées sur une seule page.
 
 .. include:: ../tabs/documents.rst
 
