@@ -8,7 +8,7 @@ nécessaire de configurer la connexion à un serveur de messagerie.
     utilisateurs possédant le droit de mettre à jour la configuration
     générale. Par défaut le suivi par courriel n'est pas activé.
 
-.. figure:: /image/configurationNotification.png
+.. figure:: /modules/configuration/images/configurationNotification.png
    :alt: image
 
    image

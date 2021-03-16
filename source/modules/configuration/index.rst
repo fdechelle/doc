@@ -24,7 +24,7 @@ Les intitulés  ne proposent pas d'actions spécifiques, se reporter aux :doc:`a
 -   **[Configurer les actions automatiques](08_Module_Configuration/08_Actions_automatiques.rst)**
      
 -   **[Configurer les collecteurs](../glpi/config_mailcollector.html)**\
-     La configuration des collecteurs s'effectue depuis le menu
+    La configuration des collecteurs s'effectue depuis le menu
     Configuration \> Collecteurs
 -   **[Ajouter un
     collecteur](../glpi/config_mailcollector_t_create.html)**\
@@ -32,12 +32,12 @@ Les intitulés  ne proposent pas d'actions spécifiques, se reporter aux :doc:`a
     collecteur](../glpi/config_mailcollector_t_delete.html)**\
 -   **[Configurer les liens externes
     protocolés](../glpi/config_link.html)**\
-     Les liens externes se configurent depuis le menu Configuration \>
+    Les liens externes se configurent depuis le menu Configuration \>
     Liens externes
 -   **[Ajouter un lien externe](../glpi/config_link_t_create.html)**\
 -   **[Supprimer un lien externe](../glpi/config_link_t_delete.html)**\
 -   **[Configurer les plugins GLPI](../glpi/config_plugin.html)**\
-     Les plugins dans GLPI, installation, configuration, activation
+    Les plugins dans GLPI, installation, configuration, activation
 
 .. toctree::
    :maxdepth: 2

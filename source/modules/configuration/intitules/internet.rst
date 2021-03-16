@@ -100,7 +100,7 @@ Le champs réseau IP apparaît afin de retrouver les informations sur les diffé
 
    Lors de la saisie d'un nom réseau, la validité du nom ainsi que celle de chacune des adresses IP est vérifiée. Si un de ces élément n'est pas valide alors il est rejeté.
 
-Pour ajouter une adresse IP à un nom réseau, il faut cliquer sur le ![image](docs/image/addcriteria.png) devant les champs de saisie des adresses IP. Pour supprimer une adresse IP, il suffit d'effacer le contenu du champs de l'IP que l'on souhaite retirer.
+Pour ajouter une adresse IP à un nom réseau, il faut cliquer sur le ![image](/modules/configuration/images/addcriteria.png) devant les champs de saisie des adresses IP. Pour supprimer une adresse IP, il suffit d'effacer le contenu du champs de l'IP que l'on souhaite retirer.
 
 Alias réseau
 ~~~~~~~~~~~~

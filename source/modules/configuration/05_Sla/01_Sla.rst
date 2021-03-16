@@ -1,6 +1,8 @@
 Configurer les SLAs
 ===================
 
+.. |NiveauSla| image:: /modules/configuration/images/NiveauSla.png
+
 Un SLA (Service Level Agreement ou accord de niveau de service) est la
 formalisation d'un contrat négocié entre le ServiceDesk et le client
 définissant le niveau de service attendu et donc au délai maximum pour
@@ -55,7 +57,7 @@ Les différents onglets
    d'escalade" <08_Module_Configuration/05_Sla/02_Niveaux_d'escalade.rst>`__**
    Permet d'ajouter un nouveau niveau d'escalade à ce SLA et liste des
    différents niveaux déjà définis avec pour chaucun leurs critères et
-   leurs actions. |image| Pour modifier un niveau il suffit de cliquer
+   leurs actions. |NiveauSla| Pour modifier un niveau il suffit de cliquer
    sur son nom.
 
 -  **Onglet "Règles"** Liste les règles métier liées à ce SLA.
@@ -86,5 +88,4 @@ Les différentes actions
 **Sujet parent :** `Module
 Configuration <08_Module_Configuration/01_Module_Configuration.rst>`__
 
-.. |image| image:: /image/NiveauSla.png
 

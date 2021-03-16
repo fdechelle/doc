@@ -6,7 +6,7 @@ capacités du serveur web et de définir les informations de
 journalisation et d'erreurs à enregistrer ainsi que la politique des
 mots de passe à appliquer.
 
-.. figure:: /image/sytemConfig.png
+.. figure:: /modules/configuration/images/systemConfig.png
    :alt: image
 
    image
@@ -34,7 +34,7 @@ mots de passe à appliquer.
    MySQL, une fois l'option activée, un nouvel onglet sera ajouté à
    l'interface.
 
-.. figure:: /image/systemMdp.png
+.. figure:: /modules/configuration/images/systemMdp.png
    :alt: image
 
    image
@@ -44,7 +44,7 @@ ou de manière bloquante. Les critères utilisables sont la longueur du
 mot de passe, la présence ou non de chiffres, minuscules, majuscules et
 symboles.
 
-.. figure:: /image/systemMaintenance.png
+.. figure:: /modules/configuration/images/systemMaintenance.png
    :alt: image
 
    image
@@ -54,7 +54,7 @@ telle qu'une mise à jour par exemple. Un message de maintenance est
 paramétrable. En mode maintenance, vous pouvez quand même accéder à GLPI
 via ``index.php?skipMaintenance=1``.
 
-.. figure:: /image/systemProxy.png
+.. figure:: /modules/configuration/images/systemProxy.png
    :alt: image
 
    image
@@ -63,7 +63,7 @@ Dans le cas d'utilisation d'un proxy, il est nécessaire d'indiquer les
 informations de configurations de ce dernier pour permettre à GLPI de
 vérifier la présence de versions plus récentes de l'application.
 
-.. figure:: /image/systemInfo.png
+.. figure:: /modules/configuration/images/systemInfo.png
    :alt: image
 
    image

@@ -8,7 +8,7 @@ Afin de pouvoir utiliser ces sources externes d'authentification, il faut au pr�
 Pour utiliser la capacité de GLPI de créer à la volée des utilisateurs présents dans les sources externes d'authentification, il faut l'activer dans le menu Configuration \> Authentification \> Configuration. 
 
 Figure 1. Menu de la configuration de l'authentification
-![image](docs/image/authConfig.png)
+![image](/modules/configuration/images/authConfig.png)
 
 Les annuaires LDAP permettent en outre de refuser la création des utilisateurs ne possédant pas d'habilitations. La suppression d'un utilisateur de l'annuaire peut aussi entraîner une action telle que la mise à la corbeille de l'utilisateur, la suppression de ses habilitations ou sa désactivation.
 C'est également à ce niveau qu'est paramétré le fuseau horaire de GLPI

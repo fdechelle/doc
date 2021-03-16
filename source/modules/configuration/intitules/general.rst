@@ -25,7 +25,7 @@ Liste tous les éléments affectés à ce lieu. Vous pouvez choisir de n'affiche
 Prise réseau
 ~~~~~~~~~~~~
 
-![image](docs/image/priseReseau.png)
+![image](/modules/configuration/images/priseReseau.png)
 
 Liste les prises réseau affectées à ce lieu et permet d'en ajouter une nouvelle. Dans ce cas, lors de la sélection d'une prise sur un port réseau d'un matériel, seules les prises réseau disponibles du lieu du matériel (et des lieux enfants) apparaissent.
 

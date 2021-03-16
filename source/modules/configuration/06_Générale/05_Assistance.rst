@@ -1,13 +1,15 @@
 Onglet Assistance
 =================
 
+.. |configMatrice| image:: /modules/configuration/images/configMatrice.png
+
 Cet onglet permet de paramétrer le comportement de la partie assistance
 de GLPI.
 
 Assistance
 ----------
 
-.. figure:: /image/configAssistance.png
+.. figure:: /modules/configuration/images/configAssistance.png
    :alt: image
 
    image
@@ -60,7 +62,7 @@ déclencher des traitements automatiques : suppression des tickets liés à
 un élément lors de sa purge, assignation d'une rubrique par défaut aux
 documents liés aux tickets.
 
-|image| La matrice de définition de la priorité permet de définir la
+|configMatrice| La matrice de définition de la priorité permet de définir la
 priorité des tickets en fonction du niveau d'impact et d'urgence. La
 disponibilité de ces niveaux dans l'application peut aussi être définie
 mais le niveau Moyen ne peut être supprimé.
@@ -70,5 +72,4 @@ mais le niveau Moyen ne peut être supprimé.
 **Sujet parent :** `Configurer les paramètres
 centraux <08_Module_Configuration/06_Générale/01_Configures_les_paramètres_centraux.rst>`__
 
-.. |image| image:: /image/configMatrice.png
 

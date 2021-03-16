@@ -87,8 +87,7 @@ Les différentes actions
       du corps de texte HTML ;
    -  **Corps du courriel au format HTML :** texte formaté en HTML.
 
-   La liste des balises disponibles est accessible via le bouton
-   |image|.
+   La liste des balises disponibles est accessible via le bouton |listTags|.
 
    ***Remarque :** En mode debug et pour certains types de
    notifications, vous pouvez accéder à une prévisualisation des
@@ -153,5 +152,5 @@ chaîne de langue ou la valeur d'un champ.
 **Sujet parent :** `Configurer les
 notifications <(08_Module_Configuration/04_Notifications/01_Notifications.rst)>`__
 
-.. |image| image:: /image/listeTags.png
+.. |listTags| image:: /modules/configuration/images/listeTags.png
 

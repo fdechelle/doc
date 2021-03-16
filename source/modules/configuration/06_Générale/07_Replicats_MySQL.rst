@@ -7,7 +7,7 @@ Cet onglet n'est visible que si l'utilisation du réplicat a été validé
 dans :doc:`l'onglet
 *Système* <./06_Systeme>`
 
-.. image:: /image/replicat.png
+.. image:: /modules/configuration/images/replicat.png
    :align: center
 
 Pour activer la gestion du réplicat, il suffit de renseigner les

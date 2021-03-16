@@ -7,7 +7,7 @@ partie inventaire de l'application.
 Parc
 ----
 
-.. figure:: /image/configparc.png
+.. figure:: /modules/configuration/images/configparc.png
    :alt: image
 
    image
@@ -41,7 +41,7 @@ Parc
    unitaire peut passer sous le mode de la gestion globale. Il est
    possible de restreindre le type de gestion selon les matériels.
 
-.. figure:: /image/configtransfert.png
+.. figure:: /modules/configuration/images/configtransfert.png
    :alt: image
 
    image
@@ -56,7 +56,7 @@ Parc
    résultante est différente de l'entité de l'ordinateur, celui-ci sera
    transféré.
 
-.. figure:: /image/configpc.png
+.. figure:: /modules/configuration/images/configpc.png
    :alt: image
 
    image
