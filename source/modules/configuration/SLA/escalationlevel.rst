@@ -45,7 +45,7 @@ Les différentes actions
 
 --------------
 
-**Sujet parent :** `SLA <08_Module_Configuration/05_Sla/01_Sla.rst>`__
+**Sujet parent :** `SLA </modules/configuration/SLA/SLA>`__
 
 **Sujet parent :** `Module
-Configuration <08_Module_Configuration/01_Module_Configuration.rst>`__
+Configuration </modules/configuration/01_Module_Configuration.rst>`__

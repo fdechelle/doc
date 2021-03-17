@@ -124,4 +124,4 @@ paramétrés en pourcentage, en heures ou en jours.
 préférences <01-premiers-pas/03_Utiliser_GLPI/04_Gérer_ses_préférences.rst>`__
 
 **Sujet parent :** `Configurer les paramètres
-centraux <08_Module_Configuration/06_Générale/01_Configurer_les_paramètres_centraux.rst>`__
+centraux </modules/configuration/general/centralparameter>`__

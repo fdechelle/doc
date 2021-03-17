@@ -138,4 +138,4 @@ Les différentes actions
 --------------
 
 **Sujet parent :** `Configurer les
-notifications <(08_Module_Configuration/04_Notifications/01_Notifications.rst)>`__
+notifications <(/modules/configuration/notification/01_Notifications.rst)>`__

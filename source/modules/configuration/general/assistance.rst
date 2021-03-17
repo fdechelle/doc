@@ -70,6 +70,6 @@ mais le niveau Moyen ne peut être supprimé.
 --------------
 
 **Sujet parent :** `Configurer les paramètres
-centraux <08_Module_Configuration/06_Générale/01_Configures_les_paramètres_centraux.rst>`__
+centraux </modules/configuration/general/01_Configures_les_paramètres_centraux.rst>`__
 
 

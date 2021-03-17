@@ -27,7 +27,7 @@ suivant des critères précis.
     passés seront exécutées.
 
 Un calendrier peut être associé à un SLA (voir `Configurer les
-intitulés <08_Module_Configuration/02_Intitulés/01_Intitulés.rst>`__).
+intitulés </modules/configuration/02_Intitulés/01_Intitulés.rst>`__).
 Par défaut, aucun calendrier n'est associé et les calculs se font sur
 une base de travail 7 jours sur 7 et 24 heures sur 24. Il est également
 possible d'utiliser le calendrier associé au ticket (i.e. celui de
@@ -54,7 +54,7 @@ Les différents onglets
 ----------------------
 
 -  **`Onglet "Niveaux
-   d'escalade" <08_Module_Configuration/05_Sla/02_Niveaux_d'escalade.rst>`__**
+   d'escalade" </modules/configuration/SLA/escalationlevel>`__**
    Permet d'ajouter un nouveau niveau d'escalade à ce SLA et liste des
    différents niveaux déjà définis avec pour chaucun leurs critères et
    leurs actions. |NiveauSla| Pour modifier un niveau il suffit de cliquer
@@ -86,6 +86,6 @@ Les différentes actions
 --------------
 
 **Sujet parent :** `Module
-Configuration <08_Module_Configuration/01_Module_Configuration.rst>`__
+Configuration </modules/configuration/01_Module_Configuration.rst>`__
 
 

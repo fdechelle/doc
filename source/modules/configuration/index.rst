@@ -9,19 +9,19 @@ Les intitulés  ne proposent pas d'actions spécifiques, se reporter aux :doc:`a
 
    Si des éléments que vous voulez supprimer sont utilisés, GLPI proposera automatiquement de transférer les entrées existantes vers un autre élément de la liste, ou bien de les remettre à zéro.
 
--   **[Configurer les composants](08_Module_Configuration/03_Composants.rst)**
+-   **[Configurer les composants](/modules/configuration/03_Composants.rst)**
      
--   **[Configurer les notifications](08_Module_Configuration/04_Notifications/01_Configurer_les_notifications.rst)**
+-   **[Configurer les notifications](/modules/configuration/notification/notificationconfiguration)**
      Configurer les suivis par courriels, créer des modèles de notifications, définir l'envoi de notification.
 
--   **[Configurer les SLAs](08_Module_Configuration/05_Sla/01_Sla.rst)**
+-   **[Configurer les SLAs](/modules/configuration/SLA/SLA)**
      Définir les SLA ainsi que les différents niveaux d'escalade.
 
--   **[Configurer les paramètres centraux](08_Module_Configuration/06_Générale/01_Configurer_les_paramètres_centraux.rst)**
+-   **[Configurer les paramètres centraux](/modules/configuration/general/centralparameter)**
 
--   **[Configurer les contrôles](08_Module_Configuration/07_Controles.rst)**
+-   **[Configurer les contrôles](/modules/configuration/07_Controles.rst)**
      
--   **[Configurer les actions automatiques](08_Module_Configuration/08_Actions_automatiques.rst)**
+-   **[Configurer les actions automatiques](/modules/configuration/automaticaction)**
      
 -   **[Configurer les collecteurs](../glpi/config_mailcollector.html)**\
     La configuration des collecteurs s'effectue depuis le menu
@@ -42,5 +42,5 @@ Les intitulés  ne proposent pas d'actions spécifiques, se reporter aux :doc:`a
 .. toctree::
    :maxdepth: 2
 
-   authentification/index
-   intitules/index
+   authentication/index
+   dropdown/index
