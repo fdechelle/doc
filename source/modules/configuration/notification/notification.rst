@@ -4,6 +4,13 @@ Gérer les notifications par entité
 Une notification est l'association d'un événement pour un type donné
 avec un modèle. Une liste destinataire est créée à cet effet.
 
+.. toctree::
+   :maxdepth: 1
+
+   mailfollowupconfiguration
+   notificationconfiguration
+   notificationtemplate
+
 Une notification étant liée à une entité, il est possible de déléguer sa
 gestion (contrairement aux modèles qui sont, eux, globaux). Par contre
 une notification définie au niveau d'une entité mère ne pourra pas être
