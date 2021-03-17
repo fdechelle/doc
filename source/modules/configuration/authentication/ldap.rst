@@ -41,7 +41,7 @@ Les différents onglets
 Annuaire LDAP
 ~~~~~~~~~~~~~
 
-.. image:: images/ldap.png
+.. image:: /modules/configuration/images/ldap.png
    :alt: Annuaire LDAP
    :align: center
    :scale: 50%
@@ -122,7 +122,7 @@ Utilisateurs
 
 Permet de configurer comment va être effectué le lien entre les champs de l'annuaire et ceux de GLPI. Pour chaque champ de GLPI (nom, prénom, image...) est associé un champ de l'annuaire.
 
-.. image:: images/ldap-users.png
+.. image:: /modules/configuration/images/ldap-users.png
    :alt: Configuration LDAP des utilisateurs
    :align: center
    :scale: 50%
@@ -132,7 +132,7 @@ Groupes
 
 Permet de configurer la méthode de stockage des groupes au niveau de l'annuaire.
 
-.. image:: images/ldap-groups.png
+.. image:: /modules/configuration/images/ldap-groups.png
    :alt: Configuration LDAP des groupes
    :align: center
    :scale: 50%
@@ -140,7 +140,7 @@ Permet de configurer la méthode de stockage des groupes au niveau de l'annuaire
 Informations avancées
 ~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: images/ldap-users.png
+.. image:: /modules/configuration/images/ldap-users.png
    :alt: Configuration LDAP des utilisateurs
    :align: center
    :scale: 50%

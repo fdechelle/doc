@@ -118,10 +118,3 @@ Permet de définir les couleurs qui seront appliquées dans la barre de
 progression d'un objet. Ces différents états dépendent des seuils
 paramétrés en pourcentage, en heures ou en jours.
 
---------------
-
-**Sujet parent :** `Gérer ses
-préférences <01-premiers-pas/03_Utiliser_GLPI/04_Gérer_ses_préférences.rst>`__
-
-**Sujet parent :** `Configurer les paramètres
-centraux </modules/configuration/general/centralparameter>`__

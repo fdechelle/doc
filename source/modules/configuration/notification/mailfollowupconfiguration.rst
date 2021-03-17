@@ -45,8 +45,7 @@ Ces 2 valeurs sont globales pour toutes les entités.
    notification.
 
 Ces 5 valeurs sont globales, mais peuvent être adaptées pour chaque
-entité (voir `configuration d'une
-entité <07_Module_Administration/04_Entités.rst>`__).
+entité (voir `configuration d'une entité <07_Module_Administration/04_Entités.rst>`__).
 
 Serveur de messagerie
 ---------------------
@@ -77,7 +76,3 @@ fonctionnement des notifications sont enregistrés, il est possible de
 tester la configuration en cliquant sur le bouton : **Envoyer un
 courriel de test à l'administrateur**.*
 
---------------
-
-**Sujet parent :** `Configurer les
-notifications <(/modules/configuration/notification/01_Notifications.rst)>`__

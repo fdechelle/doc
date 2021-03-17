@@ -26,7 +26,3 @@ sur 2 notions :
    Une notification est l'association d'un événement pour un type donné
    avec un modèle. Une liste de destinataires est créée à cet effet.
 
---------------
-
-**Sujet parent :** `Module
-Configuration </modules/configuration/01_Module_Configuration.rst>`__

@@ -43,7 +43,3 @@ Les différents onglets
 
 .. include:: ../../tabs/all.rst
 
---------------
-
-**Sujet parent :** `Module
-Configuration </modules/configuration/01_Module_Configuration.rst>`__

@@ -73,7 +73,3 @@ nécessaires pour signaler un dysfonctionnement auprès de l'équipe de
 développement de GLPI. Il suffit de copier/coller le texte sur le forum
 : le formatage est déjà géré.
 
---------------
-
-**Sujet parent :** `Configurer les paramètres
-centraux </modules/configuration/general/01_Configures_les_paramètres_centraux.rst>`__

@@ -81,7 +81,3 @@ l'application.
 -  **Recherche globale** : Si la recherche globale est autorisée, le
    champ de recherche apparaît en haut à droite sous "déconnection".
 
---------------
-
-**Sujet parent :** `Configurer les paramètres
-centraux </modules/configuration/general/01_Configures_les_paramètres_centraux.rst>`__

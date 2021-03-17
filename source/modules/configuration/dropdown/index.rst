@@ -23,7 +23,7 @@ La première étape est de sélectionner la liste à modifier. Ensuite on peut a
 Il est possible de visualiser tous les types d'intitulés existants en utilisant **voir tous**.
 
 
-.. image:: images/all_labels.png
+.. image:: /modules/configuration/images/all_labels.png
    :alt: Liste des intitulés
    :align: center
    :scale: 30%
@@ -36,6 +36,6 @@ Les intitulés avec fond plus foncé sont des intitulés globaux alors que les a
 
    general
    assistance
-   calendrier
+   calendar
    internet
-   autres
+   other

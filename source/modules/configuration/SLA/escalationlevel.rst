@@ -43,9 +43,3 @@ Les différentes actions
 -  **Ajouter un nouveau niveau d'escalade]** Cette action se fait via
    l'onglet *Niveaux d'escalade* d'un SLA
 
---------------
-
-**Sujet parent :** `SLA </modules/configuration/SLA/SLA>`__
-
-**Sujet parent :** `Module
-Configuration </modules/configuration/01_Module_Configuration.rst>`__

@@ -3,7 +3,7 @@ Traduction
 
 Cet onglet est réservé aux intitulés et n'apparait que si la traduction des intitulés a été autorisée dans la configuration générale.
 
-.. image:: /modules/configuration/dropdown/images/label_translation.png
+.. image:: /modules/configuration/images/label_translation.png
    :alt: Onglet traduction d'un intitulé
    :align: center
    :scale: 50%

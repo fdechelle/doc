@@ -135,7 +135,3 @@ Les différentes actions
    case le concernant. Ne pas oublier de cliquer sur Modifier pour
    valider vos actions (ajout ou suppression).
 
---------------
-
-**Sujet parent :** `Configurer les
-notifications <(/modules/configuration/notification/01_Notifications.rst)>`__

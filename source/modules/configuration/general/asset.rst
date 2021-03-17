@@ -79,7 +79,3 @@ Exemple : lors de la première remontée d'inventaire vous pouvez définir
 que le moniteur connecté à l'ordinateur prendra le statut Production. En
 cas de déconnexion il prendra le statut Disponible
 
---------------
-
-**Sujet parent :** `Configurer les paramètres
-centraux </modules/configuration/general/01_Configures_les_paramètres_centraux.rst>`__

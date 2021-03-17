@@ -67,9 +67,3 @@ priorité des tickets en fonction du niveau d'impact et d'urgence. La
 disponibilité de ces niveaux dans l'application peut aussi être définie
 mais le niveau Moyen ne peut être supprimé.
 
---------------
-
-**Sujet parent :** `Configurer les paramètres
-centraux </modules/configuration/general/01_Configures_les_paramètres_centraux.rst>`__
-
-

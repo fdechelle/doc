@@ -20,7 +20,7 @@ Liste tous les éléments affectés à ce lieu. Vous pouvez choisir de n'affiche
 
 .. include:: ../../tabs/historical.rst
 
-.. include:: onglets/traduction.rst
+.. include:: tabs/translation.rst
 
 Prise réseau
 ~~~~~~~~~~~~
@@ -47,7 +47,7 @@ Statuts des éléments
 
 Liste les sous-statuts existants et permet d'en ajouter un nouveau.
 
-.. include:: onglets/traduction.rst
+.. include:: tabs/translation.rst
 
 .. include:: ../../tabs/all.rst
 

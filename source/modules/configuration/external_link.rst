@@ -34,8 +34,8 @@ Un Lien type web
 
 Créer un lien externe protocolé ayant pour nom : ``http://[IP]`` ; l'affecter au matériel réseau.
 
- Lien de type RDP
--------------------
+Lien de type RDP
+----------------
 
 Pour l'accès à distance sur les ordinateurs, créer un lien externe protocolé ayant pour nom ``Accès distant.rdp`` et paramétrer le **Contenu du fichier** en y insérant le contenu d'un fichier type RDP et en remplaçant l'ip / le nom / le domaine par des TAGS type [IP], [NAME], [DOMAIN].
 

@@ -83,9 +83,3 @@ Les différentes actions
 -  **Ajouter un niveau d'escalade** Cette action se fait via l'onglet
    *Niveaux d'escalade*
 
---------------
-
-**Sujet parent :** `Module
-Configuration </modules/configuration/01_Module_Configuration.rst>`__
-
-

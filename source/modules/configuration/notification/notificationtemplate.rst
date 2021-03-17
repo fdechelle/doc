@@ -1,6 +1,8 @@
 Configuration des modèles de notifications
 ==========================================
 
+.. |listTags| image:: /modules/configuration/images/listeTags.png
+
 Un modèle est un objet global de GLPI qui définit toutes les données
 relatives au format et formatage d'une notification.
 
@@ -146,11 +148,4 @@ chaîne de langue ou la valeur d'un champ.
 
        Important : il n'est pas possible d'imbriquer 2 balises FOREACH
        mais il est possible de placer des balises IF dans des FOREACH.
-
---------------
-
-**Sujet parent :** `Configurer les
-notifications <(/modules/configuration/notification/01_Notifications.rst)>`__
-
-.. |listTags| image:: /modules/configuration/images/listeTags.png
 

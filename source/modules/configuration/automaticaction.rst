@@ -1,14 +1,7 @@
 Configurer les actions automatiques
 ===================================
 
-L'action automatique **watcher** est une action qui surveille
-l'exécution correcte des autres actions automatiques. Si une d'entre
-elles se retrouve en erreur, une notification sera envoyée. Il faut donc
-que le suivi par courriel soit activé (voir `Configurer les
-notifications </modules/configuration/notification/01_Configurer_les_notificationss.rst>`__"))
-; les destinataires sont paramétrables dans la notification **Crontask
-Watcher** (voir `Gérer les notifications par
-entité </modules/configuration/notification/notification>`__).
+L'action automatique **watcher** est une action qui surveille l'exécution correcte des autres actions automatiques. Si une d'entre elles se retrouve en erreur, une notification sera envoyée. Il faut donc que le suivi par courriel soit activé (voir `Configurer les notifications </modules/configuration/notification/01_Configurer_les_notificationss.rst>`__")) ; les destinataires sont paramétrables dans la notification **Crontask Watcher** (voir `Gérer les notifications par entité </modules/configuration/notification/notification>`__).
 
 Les différents onglets
 ----------------------
@@ -67,7 +60,3 @@ Les différentes actions
      externe, depuis la ligne de commande, en exécutant le fichier
      front/cron.php.
 
---------------
-
-**Sujet parent :** `Module
-Configuration </modules/configuration/01_Module_Configuration.rst>`__
