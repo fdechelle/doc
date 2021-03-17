@@ -25,7 +25,12 @@ Liste tous les éléments affectés à ce lieu. Vous pouvez choisir de n'affiche
 Prise réseau
 ~~~~~~~~~~~~
 
-![image](/modules/configuration/images/priseReseau.png)
+.. figure:: /modules/configuration/images/priseReseau.png)
+   :alt: Prise réseau
+   :align: center
+
+   Prise réseau
+
 
 Liste les prises réseau affectées à ce lieu et permet d'en ajouter une nouvelle. Dans ce cas, lors de la sélection d'une prise sur un port réseau d'un matériel, seules les prises réseau disponibles du lieu du matériel (et des lieux enfants) apparaissent.
 
@@ -63,8 +68,7 @@ Listes noires
 
 La liste des Listes noires est une liste de valeurs à plat valable pour toutes les entités.
 
-Elle comprend la valeur que vous voulez mettre en liste noire ainsi que sur quel type l'appliquer (IP, MAC, numéro de série, UUID ou courriel).
-Les listes noires sont utilisées pour les imports automatique via un agent d'inventaire ou par le collecteur de courriels.
+Elle comprend la valeur que vous voulez mettre en liste noire ainsi que sur quel type l'appliquer (IP, MAC, numéro de série, UUID ou courriel).  Les listes noires sont utilisées pour les imports automatique via un agent d'inventaire ou par le collecteur de courriels.
 
 .. include:: ../../tabs/historical.rst
 

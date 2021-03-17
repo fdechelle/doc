@@ -28,8 +28,7 @@ Il est possible de visualiser tous les types d'intitulés existants en utilisant
    :align: center
    :scale: 30%
 
-Cette liste peut varier suivant les droits accordés dans le profil.
-Les intitulés avec fond plus foncé sont des intitulés globaux alors que les autres peuvent être délégués par entité.
+Cette liste peut varier suivant les droits accordés dans le profil. Les intitulés avec fond plus foncé sont des intitulés globaux alors que les autres peuvent être délégués par entité.
 
 .. toctree::
    :maxdepth: 2

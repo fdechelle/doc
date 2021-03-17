@@ -9,34 +9,30 @@ Les intitulés ne proposent pas d'actions spécifiques, se reporter aux :doc:`ac
 
    Si des éléments que vous voulez supprimer sont utilisés, GLPI proposera automatiquement de transférer les entrées existantes vers un autre élément de la liste, ou bien de les remettre à zéro.
 
--   **[Configurer les composants](/modules/configuration/03_Composants.rst)**
+* [Configurer les composants](/modules/configuration/03_Composants.rst)
      
--   **[Configurer les notifications](/modules/configuration/notification/notificationconfiguration)**
+* [Configurer les notifications](/modules/configuration/notification/notificationconfiguration)
      Configurer les suivis par courriels, créer des modèles de notifications, définir l'envoi de notification.
 
--   **[Configurer les SLAs](/modules/configuration/SLA/SLA)**
+* [Configurer les SLAs](/modules/configuration/SLA/SLA)
      Définir les SLA ainsi que les différents niveaux d'escalade.
 
--   **[Configurer les paramètres centraux](/modules/configuration/general/centralparameter)**
+* [Configurer les paramètres centraux](/modules/configuration/general/centralparameter)
 
--   **[Configurer les contrôles](/modules/configuration/07_Controles.rst)**
+* [Configurer les contrôles](/modules/configuration/07_Controles.rst)
      
--   **[Configurer les actions automatiques](/modules/configuration/automaticaction)**
+* [Configurer les actions automatiques](/modules/configuration/automaticaction)
      
--   **[Configurer les collecteurs](../glpi/config_mailcollector.html)**\
-    La configuration des collecteurs s'effectue depuis le menu
-    Configuration \> Collecteurs
--   **[Ajouter un
-    collecteur](../glpi/config_mailcollector_t_create.html)**\
--   **[Supprimer un
-    collecteur](../glpi/config_mailcollector_t_delete.html)**\
--   **[Configurer les liens externes
-    protocolés](../glpi/config_link.html)**\
-    Les liens externes se configurent depuis le menu Configuration \>
-    Liens externes
--   **[Ajouter un lien externe](../glpi/config_link_t_create.html)**\
--   **[Supprimer un lien externe](../glpi/config_link_t_delete.html)**\
--   **[Configurer les plugins GLPI](../glpi/config_plugin.html)**\
+* **[Configurer les collecteurs](../glpi/config_mailcollector.html)**\
+    La configuration des collecteurs s'effectue depuis le menu Configuration \> Collecteurs
+
+* **[Add a collecteur](../glpi/config_mailcollector_t_create.html)**\
+* **[Delete a collecteur](../glpi/config_mailcollector_t_delete.html)**\
+* **[Configurer les liens externes protocolés](../glpi/config_link.html)**\
+    Les liens externes se configurent depuis le menu Configuration \> Liens externes
+* **[Add a lien externe](../glpi/config_link_t_create.html)**\
+* **[Delete a lien externe](../glpi/config_link_t_delete.html)**\
+* **[Configurer les plugins GLPI](../glpi/config_plugin.html)**\
     Les plugins dans GLPI, installation, configuration, activation
 
 .. toctree::

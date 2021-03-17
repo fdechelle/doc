@@ -35,8 +35,8 @@ Même si un utilisateur est authentifié sur un annuaire il n'est pas forcément
 
 Ce mécanisme repose sur l'utilisation de règles d'affectations d'habilitations.
 
-Les différents onglets
-----------------------
+The different tabs
+------------------
 
 Annuaire LDAP
 ~~~~~~~~~~~~~
@@ -211,7 +211,7 @@ L'utilisation des réplicats se fait uniquement dans le cas d'une perte de conne
 
 .. include:: ../../tabs/all.rst
 
-Les différentes actions
------------------------
+The different actions
+---------------------
 
 Les annuaires LDAP ne proposent pas d'actions spécifiques, se reporter aux :doc:`actions communes <../generalites/actions>`.

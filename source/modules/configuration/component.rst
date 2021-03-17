@@ -19,8 +19,8 @@ Une fois un type de composant sélectionné (*Carte mère*, *Processeur*...), on
    :alt: Liste des composants
    :align: center
 
-Les différents onglets
-----------------------
+The different tabs
+------------------
 
 Principal
 ~~~~~~~~~
