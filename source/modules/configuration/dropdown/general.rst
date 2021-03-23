@@ -25,7 +25,7 @@ Liste tous les éléments affectés à ce lieu. Vous pouvez choisir de n'affiche
 Prise réseau
 ~~~~~~~~~~~~
 
-.. figure:: /modules/configuration/images/priseReseau.png)
+.. figure:: /modules/configuration/images/priseReseau.png
    :alt: Prise réseau
    :align: center
 
