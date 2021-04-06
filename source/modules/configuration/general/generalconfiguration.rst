@@ -20,7 +20,7 @@ Cet onglet permet de personnaliser l'apparence générale de l'application.
 
 * **Nombre de décimales par défaut** : nombre de décimales affichées dans les montants.
 
-* **Traduction des intitulés** : autorise ou non la traduction des intitulés. Une fois ce paramètre actif, l'intitulé aura un onglet supplémentaire pour effectuer la traduction. (voir :doc:`la traduction des intitulés </modules/configuration/02_Intitulés/02_Onglet_Traduction.rst>`.
+* **Traduction des intitulés** : autorise ou non la traduction des intitulés. Une fois ce paramètre actif, l'intitulé aura un onglet supplémentaire pour effectuer la traduction. (voir :doc:`la traduction des intitulés </modules/configuration/dropdown/tabs/translation>`.
 
 * **Taille de page pour cet intitulé (pagination utilisant scroll)** : nombre d'éléments affichés dans une liste déroulante à chaque scroll.
 

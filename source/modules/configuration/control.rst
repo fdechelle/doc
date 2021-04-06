@@ -14,11 +14,11 @@ The different tabs
 
    Pour un ordinateur, le critère d'unicité global est le numéro de série. Si l'on tente d'enregistrer, quelque soit l'entité un autre ayant le même numéro de série, l'insertion est refusée et un message d'erreur indique l'élément déjà présent en base. Par contre, si un utilisateur insère un ordinateur sans numéro de série, alors aucune vérification sur l'unicité ne sera effectuée.
 
-   Les critères ajoutés dans les listes noires seront ignorer lors du calcul d'unicité. Voir :doc:`Configurer les intitulés </modules/configuration/02_Intitulés/03_Intitulés_Général.rst>`.
+   Les critères ajoutés dans les listes noires seront ignorer lors du calcul d'unicité. Voir :doc:`Configurer les intitulés </modules/configuration/dropdown/general>`.
 
 * **Onglet "Duplique"** Cet onglet liste l'ensemble des valeurs correspondant aux critères qui sont actuellement en doublon dans la base GLPI avec éventuellement pour chacune d'elles un lien vers la fiche de l'objet.
 
-* :doc:`Onglet "Historique" <Les_différents_onglets/Onglet_Historique.rst>` L'historique est visualisé depuis l'onglet *Historique*
+* :doc:`Onglet "Historique" </modules/tabs/historical>` L'historique est visualisé depuis l'onglet *Historique*
 
 .. include:: ../tabs/debug.rst
 

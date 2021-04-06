@@ -76,9 +76,9 @@ The different tabs
 The different actions
 -----------------------
 
-* :doc:`Add a notification <Les_différentes_actions/Créer_un_nouvel_objet.rst>`
-* :doc:`Voir une notification <Les_différentes_actions/Visualiser_un_objet.rst>`
-* :doc:`Modify a notification <Les_différentes_actions/Modifier_un_objet.rst>`
-* :doc:`Delete a notification <Les_différentes_actions/Supprimer_un_objet.rst>`
+* :doc:`Add a notification </Les_différentes_actions/creer_un_nouvel_objet>`
+* :doc:`Voir une notification </Les_différentes_actions/visualiser_un_objet>`
+* :doc:`Modify a notification </Les_différentes_actions/modifier_un_objet>`
+* :doc:`Delete a notification </Les_différentes_actions/supprimer_un_objet>`
 * **Gérer les destinataires d'une notification** Pour ajouter un nouveau destinataire il suffit de cliquer dans le cadre blanc (cela ouvrira la liste des destinataires) et choisir son destinataire. Pour supprimer un destinataire il suffit de cliquer sur la croix dans la case le concernant. Ne pas oublier de cliquer sur Modifier pour valider vos actions (ajout ou suppression).
 

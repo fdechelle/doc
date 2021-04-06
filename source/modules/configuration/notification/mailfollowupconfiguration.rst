@@ -24,7 +24,7 @@ Ces 2 valeurs sont globales pour toutes les entités.
 * **Nom de réponse (si nécessaire** : nom associé au courriel de réponse ;
 * **Signature des messages** : texte ajouté à la fin de chaque notification.
 
-Ces 5 valeurs sont globales, mais peuvent être adaptées pour chaque entité (voir :doc:`configuration d'une entité <07_Module_Administration/04_Entités.rst>`).
+Ces 5 valeurs sont globales, mais peuvent être adaptées pour chaque entité (voir :doc:`configuration d'une entité </modules/administration/entities>`).
 
 Serveur de messagerie
 ---------------------

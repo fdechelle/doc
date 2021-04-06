@@ -1,7 +1,7 @@
 Valeurs par défaut
 ==================
 
-Cet onglet permet de définir les préférences d'affichage appliquées par défaut à GLPI. Elles peuvent être modifiées par les utilisateurs dans leur session (voir :doc:`Gérer ses préférences <01-premiers-pas/03_Utiliser_GLPI/04_Gérer_ses_préférences.rst>`).
+Cet onglet permet de définir les préférences d'affichage appliquées par défaut à GLPI. Elles peuvent être modifiées par les utilisateurs dans leur session (voir :doc:`Gérer ses préférences </first-steps/preferences>`).
 
 Personnalisation
 ----------------

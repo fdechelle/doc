@@ -24,7 +24,7 @@ The different tabs
 * **Onglet "Traductions"** C'est dans cet onglet que vous allez définir le contenu de votre notification. Il liste les différents notifications défnies par langue et permet d'ajouter une nouvelle langue.
   *.. note:: une traduction par défaut est applicable à toutes les langues de GLPI n'ayant pas leur propre traduction*.
 
-* :doc:`Onglet "Historique" <Les_différents_onglets/Onglet_Historique.rst>`
+* :doc:`Onglet "Historique" </modules/tabs/historical>`
    L'historique est visualisé depuis l'onglet *Historique*
 
 * **:doc:`Onglet "Tous" <Les_différents_onglets/Onglet_Tous.rst>`** Pour un élément, toutes les informations sont affichées sur une seule page.
@@ -32,10 +32,10 @@ The different tabs
 The different actions
 -----------------------
 
-* :doc:`Add a nouveau modèle de notification <Les_différentes_actions/Créer_un_nouvel_objet.rst>`
-* :doc:`Voir un nouveau modèle de notification <Les_différentes_actions/Visualiser_un_objet.rst>`
-* :doc:`Modify a nouveau modèle de notification <Les_différentes_actions/Modifier_un_objet.rst>`
-* :doc:`Delete a nouveau modèle de notification <Les_différentes_actions/Supprimer_un_objet.rst>`
+* :doc:`Add a nouveau modèle de notification </Les_différentes_actions/creer_un_nouvel_objet>`
+* :doc:`Voir un nouveau modèle de notification </Les_différentes_actions/visualiser_un_objet>`
+* :doc:`Modify a nouveau modèle de notification </Les_différentes_actions/modifier_un_objet>`
+* :doc:`Delete a nouveau modèle de notification </Les_différentes_actions/supprimer_un_objet>`
 * **Add a nouvelle traduction** Une traduction représente la disponibilité d'un modèle dans une langue donnée. En fonction de celle choisie par le destinataire, la notification sera envoyée dans la langue correspondante. Si elle n'est pas disponible, la traduction par défaut sera utilisée.
 
    Une traduction est constituée d'une liste de balises qui font références à :

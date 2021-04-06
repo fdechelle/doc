@@ -1,11 +1,11 @@
-Sources d'authentification externes
-===================================
+External authentication sources
+===============================
 
-Ce menu permet de configurer les paramètres généraux de l'intégration avec des sources externes d'authentification.
+This menu allows to configure the general parameters of the integration with external authentication sources.
 
 Afin de pouvoir utiliser ces sources externes d'authentification, il faut au préalable activer les extensions correspondantes dans la configuration de PHP. Il n'y a pas de limite quant au nombre de sources externes configurées dans l'application.
 
-Pour utiliser la capacité de GLPI de créer à la volée des utilisateurs présents dans les sources externes d'authentification, il faut l'activer dans le menu Configuration \> Authentification \> Configuration. 
+Pour utiliser la capacité de GLPI de créer à la volée des utilisateurs présents dans les sources externes d'authentification, il faut l'activer dans le menu *Configuration > Authentification > Configuration*. 
 
 .. figure:: /modules/configuration/images/authConfig.png
    :align: center
@@ -17,8 +17,12 @@ Les annuaires LDAP permettent en outre de refuser la création des utilisateurs 
 
 Les sources d'authentification externes prises en charges par GLPI sont les suivantes :
 
-* annuaire LDAP ; voir [Authentifier des utilisateurs à partir d'annuaires LDAP](/modules/configuration/09_Authentification/03_Annuaires_LDAP.rst "L'interface de GLPI avec les annuaires LDAP se configure depuis le menu Configuration > Authentification > Annuaires LDAP.");
-* serveur de messagerie ; voir [Authentifier des utilisateurs à partir de serveurs de messagerie](config_auth_imap.html "L'interfaçage de GLPI avec des serveurs de messagerie comme source d'authentification se configure depuis le menu Configuration > Authentification > Serveurs de messagerie.");
+* annuaire LDAP ; voir :doc:`Authentifier des utilisateurs à partir d'annuaires LDAP </modules/configuration/authentication/ldap>`. "L'interface de GLPI avec les annuaires LDAP se configure depuis le menu Configuration > Authentification > Annuaires LDAP.");
+
+* serveur de messagerie ; voir [Authentifier des utilisateurs à partir de serveurs de messagerie](config_auth_imap.html "L'interfaçage de GLPI avec des serveurs de messagerie comme source d'authentification se configure depuis le menu Configuration > Authentification > Serveurs de messagerie.";
+
 * serveur CAS ; voir [Configurer les autres méthodes d'authentification externe](config_auth_other.html "L'interfaçage de GLPI à des systèmes permettant de faire de l'authentification unique se configure depuis le menu Configuration > Authentification > Autre méthode d'authentification.");
+
 * certificat x509 ; voir [Configurer les autres méthodes d'authentification externe](config_auth_other.html "L'interfaçage de GLPI à des systèmes permettant de faire de l'authentification unique se configure depuis le menu Configuration > Authentification > Autre méthode d'authentification.");
+
 * authentification déléguée au serveur web; voir [Configurer les autres méthodes d'authentification externe](config_auth_other.html "L'interfaçage de GLPI à des systèmes permettant de faire de l'authentification unique se configure depuis le menu Configuration > Authentification > Autre méthode d'authentification.");

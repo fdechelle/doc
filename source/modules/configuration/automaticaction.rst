@@ -1,7 +1,7 @@
 Configurer les actions automatiques
 ===================================
 
-L'action automatique **watcher** est une action qui surveille l'exécution correcte des autres actions automatiques. Si une d'entre elles se retrouve en erreur, une notification sera envoyée. Il faut donc que le suivi par courriel soit activé (voir :doc:`Configurer les notifications </modules/configuration/notification/01_Configurer_les_notificationss.rst>`")) ; les destinataires sont paramétrables dans la notification **Crontask Watcher** (voir :doc:`Gérer les notifications par entité </modules/configuration/notification/notification>`).
+L'action automatique **watcher** est une action qui surveille l'exécution correcte des autres actions automatiques. Si une d'entre elles se retrouve en erreur, une notification sera envoyée. Il faut donc que le suivi par courriel soit activé (voir :doc:`Configurer les notifications </modules/configuration/notification/notificationconfiguration>`")) ; les destinataires sont paramétrables dans la notification **Crontask Watcher** (voir :doc:`Gérer les notifications par entité </modules/configuration/notification/notification>`).
 
 The different tabs
 ------------------

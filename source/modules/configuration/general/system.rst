@@ -8,7 +8,7 @@ Cet onglet permet de visualiser un résumé des informations sur les capacités 
 
    image
 
-* **Niveau de journalisation** : chaque événement interne à l'application est enregistré dans les journaux qui sont visibles dans la section :doc:`Administration > Journaux <07_Module_Administration/10_Journaux.rst>`. Dans cet onglet, il est possible de réduire le degré de verbosité de ces journaux.
+* **Niveau de journalisation** : chaque événement interne à l'application est enregistré dans les journaux qui sont visibles dans la section :doc:`Administration > Journaux </modules/administration/logs>`. Dans cet onglet, il est possible de réduire le degré de verbosité de ces journaux.
 
 * **Traceurs dans fichiers (SQL, courriel, action automatique...)** : il est possible d'enregistrer dans des fichiers certains événements supplémentaires (SQL, notifications, action automatique). Ces fichiers sont alors disponibles dans files/\_log.
 

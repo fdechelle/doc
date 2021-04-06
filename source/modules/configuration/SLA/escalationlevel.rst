@@ -20,7 +20,7 @@ The different tabs
 
 * **Onglet "Actions"**: Permet d'ajouter une action qui sera exécutée si le critère défini est rempli. Il liste également les actions déjà définies pour ce niveau d'escalade.
 
-* :doc:`Onglet "Historique" <Les_différents_onglets/Onglet_Historique.rst>`: l'historique est visualisé depuis l'onglet *Historique*
+* :doc:`Onglet "Historique" </modules/tabs/historical>`: l'historique est visualisé depuis l'onglet *Historique*
 
 .. include:: ../../tabs/debug.rst
 
