@@ -4,15 +4,15 @@ Configurer les actions automatiques
 L'action automatique **watcher** est une action qui surveille l'exécution correcte des autres actions automatiques. Si une d'entre elles se retrouve en erreur, une notification sera envoyée. Il faut donc que le suivi par courriel soit activé (voir :doc:`Configurer les notifications </modules/configuration/notification/01_Configurer_les_notificationss.rst>`")) ; les destinataires sont paramétrables dans la notification **Crontask Watcher** (voir :doc:`Gérer les notifications par entité </modules/configuration/notification/notification>`).
 
 The different tabs
-----------------------
+------------------
 
 * Action automatique
 
-   Pour chaque action, il est possible de configurer :
+  Pour chaque action, il est possible de configurer :
 
-   -  **La fréquence d'exécution** ;
+  -  **La fréquence d'exécution** ;
 
-   -  **Le statut** : permet de désactiver si besoin l'action ;
+  -  **Le statut** : permet de désactiver si besoin l'action ;
 
    -  **Le mode d'exécution** :
 
@@ -32,7 +32,7 @@ The different tabs
 * **Journaux** Liste les dernières exécution suivant le paramètre défini dans l'onglet *Action automatique* (voir ci-dessus). Un lien sur la date d'exécution permet d'avoir le détail d'une exécution précise.
 
 The different actions
------------------------
+---------------------
 
 * **Désactiver une action automatique** : passer le statut à Désactivé
 * **Débloquer une action automatique** : dans certains cas, une cas automatiques peut se trouver bloquée (ex. arrêt de la base de données pour sauvegarde alors de l'action automatique controlant les réplicats est active). Dans ce cas, il suffit de cliquer sur la croix à droite du mot "en cours d'exécution"

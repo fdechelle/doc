@@ -56,9 +56,9 @@ Annuaire LDAP
 * **serveur** et **port** : représentant  l'adresse de l'annuaire LDAP ;
 * **basedn** : emplacement de l'annuaire à partir duquel les recherches et lectures seront effectuées ;
 
-   .. note::
+.. note::
 
-      Le `basedn` doit être renseigné sous la forme du DN complet de l'utilisateur. Par exemple ``CN=glpiadmin,DC=mondomaine`` si le compte dans l'annuaire pour GLPI est `glpiadmin`.
+   Le `basedn` doit être renseigné sous la forme du DN complet de l'utilisateur. Par exemple ``CN=glpiadmin,DC=mondomaine`` si le compte dans l'annuaire pour GLPI est `glpiadmin`.
 
 * **DN du compte** : identifiant de connexion à l'annuaire LDAP (dans le cas d'un accès non anonyme) ;
 * **Mot de passe du compte** : mot de passe correspondant (dans le cas d'un accès non anonyme). Il est possible d'effacer le mot de passe en cochant la case **effacer** puis de valider ;
