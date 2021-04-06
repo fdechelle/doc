@@ -3,26 +3,29 @@ External authentication sources
 
 This menu allows to configure the general parameters of the integration with external authentication sources.
 
-Afin de pouvoir utiliser ces sources externes d'authentification, il faut au préalable activer les extensions correspondantes dans la configuration de PHP. Il n'y a pas de limite quant au nombre de sources externes configurées dans l'application.
+In order to be able to use these external authentication sources, the corresponding extensions in the PHP configuration must first be activated.
 
-Pour utiliser la capacité de GLPI de créer à la volée des utilisateurs présents dans les sources externes d'authentification, il faut l'activer dans le menu *Configuration > Authentification > Configuration*. 
+The number of configured external sources is not limited.
+
+It is also at this level that the GLPI time zone is set.
+
+In order to enable GLPI to create on the fly users from external authentication sources, it must be activated in menu *Configuration > Authentication > Configuration*.
 
 .. figure:: /modules/configuration/images/authConfig.png
    :align: center
-   :alt: Menu de la configuration de l'authentification
+   :alt: Authentication configuration menu
 
-   Menu de la configuration de l'authentification
+   Authentication configuration menu
 
-Les annuaires LDAP permettent en outre de refuser la création des utilisateurs ne possédant pas d'habilitations. La suppression d'un utilisateur de l'annuaire peut aussi entraîner une action telle que la mise à la corbeille de l'utilisateur, la suppression de ses habilitations ou sa désactivation.  C'est également à ce niveau qu'est paramétré le fuseau horaire de GLPI
+LDAP directories also allow to refuse the creation of users without authorizations. Deleting a user from the directory can also trigger an action such as placing the user in the trash, deleting their permissions or deactivating yser. 
 
-Les sources d'authentification externes prises en charges par GLPI sont les suivantes :
+GLPI supports the following external authentication sources:
 
-* annuaire LDAP ; voir :doc:`Authentifier des utilisateurs à partir d'annuaires LDAP </modules/configuration/authentication/ldap>`. "L'interface de GLPI avec les annuaires LDAP se configure depuis le menu Configuration > Authentification > Annuaires LDAP.");
+* LDAP directory: see :doc:`Authenticate users from LDAP directories</modules/configuration/authentication/ldap>`.
+   GLPI's interface with LDAP directories can be configured from the menu *Configuration > Authentication > LDAP directories*
 
-* serveur de messagerie ; voir [Authentifier des utilisateurs à partir de serveurs de messagerie](config_auth_imap.html "L'interfaçage de GLPI avec des serveurs de messagerie comme source d'authentification se configure depuis le menu Configuration > Authentification > Serveurs de messagerie.";
+* mail server: see :doc:`Authenticate users from mail servers<config_auth_imap.html>`.
+   GLPI's interface with mail servers as an authentication source is configured from the menu *Configuration > Authentication > Mail servers*
 
-* serveur CAS ; voir [Configurer les autres méthodes d'authentification externe](config_auth_other.html "L'interfaçage de GLPI à des systèmes permettant de faire de l'authentification unique se configure depuis le menu Configuration > Authentification > Autre méthode d'authentification.");
-
-* certificat x509 ; voir [Configurer les autres méthodes d'authentification externe](config_auth_other.html "L'interfaçage de GLPI à des systèmes permettant de faire de l'authentification unique se configure depuis le menu Configuration > Authentification > Autre méthode d'authentification.");
-
-* authentification déléguée au serveur web; voir [Configurer les autres méthodes d'authentification externe](config_auth_other.html "L'interfaçage de GLPI à des systèmes permettant de faire de l'authentification unique se configure depuis le menu Configuration > Authentification > Autre méthode d'authentification.");
+* CAS server, X509 certificate, authentication delegated to the web server: see :doc:`Configure other external authentication methods<config_auth_other.html>`
+   GLPI's interface with systems allowing single sign-on is configured from the menu *Configuration > Authentication > Alternative authentication method*
