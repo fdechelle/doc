@@ -23,7 +23,7 @@ The Configuration module provides access to the general configuration options of
    general/index
 
 
-Big mess:
+.. todo:: fix this big mess: where are all these .html files coming from?
 
 * **[Configurer les collecteurs](../glpi/config_mailcollector.html)**\
     La configuration des collecteurs s'effectue depuis le menu Configuration \> Collecteurs

@@ -58,12 +58,12 @@ Les informations suivantes seront affichés :
 
       Plusieurs onglet sont alors proposés :
 
-      *  Onglet "Elément - Lien nom du composant" : liste les caractéristiques de ce composant.
-      *  :doc:`Onglet "Gestion" <../parc/onglets/gestion>` : gérer les informations financières et administratives.
-      *  :doc:`Onglet "Documents" <../tabs/documents>`
-      *  :doc:`Onglet "Historique" <../tabs/historical>`
-      *  :doc:`Onglet "Debug" <../tabs/debug>` : uniquement si vous êtes connecté en mode Debug.
-      * :doc:`Onglet "Tous" <../tabs/all>` : pour un élément, toutes les informations sont affichées sur une seule page.
+      * Onglet "Elément - Lien nom du composant" : liste les caractéristiques de ce composant.
+      * :doc:`Onglet "Gestion" </modules/tabs/management>`: gérer les informations financières et administratives.
+      * :doc:`Onglet "Documents" </modules/tabs/documents>`
+      * :doc:`Onglet "Historique" </modules/tabs/historical>`
+      * :doc:`Onglet "Debug" </modules/tabs/debug>` : uniquement si vous êtes connecté en mode Debug.
+      * :doc:`Onglet "Tous" </modules/tabs/all>` : pour un élément, toutes les informations sont affichées sur une seule page.
 
 .. include:: ../tabs/documents.rst
 
