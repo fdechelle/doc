@@ -1,43 +1,39 @@
-Authentification
-================
+Authentication
+==============
 
-C'est ici que GLPI gère l'authentification et les informations personnelles des utilisateurs.
+GLPI allows user access after checking the following conditions:
 
-L'accès d'un utilisateur à GLPI est possible après que ces conditions aient été vérifiées :
+#. sending authentication information by the user
+#. existence of user ID
+#. user authentication
+#. attribution of permissions to the user
 
-#. envoi d'informations d'authentification par l'utilisateur ;
-#. existence de l'identifiant de l'utilisateur ;
-#. authentification de l'utilisateur ;
-#. attribution d'habilitations à l'utilisateur.
+GLPI uses its own internal user base. These are either created from the application interface, or imported from one or more external sources. Depending on the type of source, users can be imported either massively or on the fly when attempting to connect a user not yet known to GLPI.
 
-GLPI utilise sa propre base interne d'utilisateurs. Ceux-ci sont soit créés depuis l'interface de l'application, soit importés depuis une ou plusieurs sources externes. Selon le type de source, l'import des utilisateurs peut se faire soit en masse, soit au fil de l'eau lors de la tentative de connexion d'un utilisateur non encore connu de GLPI.
+To perform authentication, GLPI uses an internal password database, to which one or more external authentication sources can be added. The use of external authentication methods allows this functionality to be delegated to third-party systems providing identity management. See :doc:`Configure integration with external authentication sources</modules/configuration/authentication/configuration>`.
 
-Pour effectuer l'authentification, GLPI fait appel à une base de mots de passes interne, qui peut être complétée par une ou plusieurs sources externes d'authentification. L'utilisation de méthodes d'authentification externes permet de déléguer cette fonctionnalité à des systèmes tiers assurant la gestion d'identité. 
-
-Voir :doc:`Configurer l'intégration avec les sources d'authentification externes </modules/configuration/authentication/configuration>` "Les paramètres généraux de l'intégration avec des sources externes d'authentification se configurent dans le menu Configuration > Authentification > Configuration.").
-
-L'attribution des habilitations est décrite dans la section :doc:`Attribuer des habilitations à un utilisateur</modules/administration/rules/userauthorizations>` "GLPI dispose d'un moteur d'habilitations dynamiques qui se base sur des sources externes d'authentification. Il est accessible depuis le menu Administration > Règles > Règles d'affectation d'habilitation à un utilisateur.").
+GLPI has a dynamic authorization engine which is based on external authentication sources. The allocation of authorizations is described in the section :doc:`Assign authorizations to a user</modules/administration/rules/userauthorizations>`. 
 
 .. note::
 
-   La cinématique d'authentification est la suivante :
+   The authentication process is as follows:
 
-   #. l'utilisateur entre son identifiant et son mot de passe ;
-   #. GLPI vérifie si l'utilisateur est déjà enregistré dans la base. S'il ne l'est pas :
+   #. the user enters username and password
+   #. GLPI checks if the user is already registered in the database. If not :
 
-      #. GLPI essaye les méthodes d'authentification les unes après les autres : la base interne, puis tous les annuaires LDAP et enfin les annuaires de messagerie ;
-      #. lorsque l'authentification est réussie, l'utilisateur est créé dans la base interne, ainsi que sa méthode d'authentification ;
-      #. si aucune source n'a pu authentifier l'utilisateur, celui-ci est redirigé vers une page lui indiquant que son identifiant ou mot de passe est incorrect ;
+      #. GLPI tries the authentication methods one after the other: the internal database, then all the LDAP directories and finally the mail directories
+      #. when the authentication is successful, the user is created in the internal database, as well as its authentication method
+      #. if no source has been able to authenticate the user, user is redirected to a page indicating that username or password is incorrect
 
-   #. Si l'utilisateur est déjà présent dans la base interne, ou une fois son identifiant créé :
+   #. If the user is already present in the internal database, or once identifier has been created:
 
-      #. GLPI tente d'authentifier l'utilisateur en utilisant la dernière méthode d'authentification réussie (et uniquement celle-ci) ;
-      #. si l'authentification a échoué, l'utilisateur est redirigé vers une page lui indiquant que son identifiant ou mot de passe est incorrect ;
+      #. GLPI attempts to authenticate the user using the last successful authentication method (and only this one)
+      #. if authentication failed, the user is redirected to a page indicating that username or password is incorrect
 
-   #. Le moteur d'habilitation est lancé avec les informations de l'utilisateur :
+   #. The authorization engine is launched with the user's information:
 
-      #.  si le moteur a donné à celui-ci une ou plusieurs habilitations, alors l'utilisateur a accès à GLPI ;
-      #.  si l'utilisateur ne se voit attribuer aucune habilitation, alors bien qu'étant inscrit dans la base GLPI, il ne peut se connecter à l'application.
+      #.  if the engine has given it one or more authorizations, then the user has access to GLPI
+      #.  if the user is not assigned any authorization, although registered in the GLPI database, connection to the application is refused
 
 .. toctree::
    :maxdepth: 1
