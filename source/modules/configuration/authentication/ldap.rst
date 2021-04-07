@@ -1,5 +1,5 @@
-Annuaires LDAP
-==============
+LDAP Directories
+================
 
 GLPI interfaces with LDAP directories in order to authenticate users, control their access, retrieve their personal information and import groups.
 
@@ -68,7 +68,7 @@ LDAP Directory
      
   * for Active Directory use the following filter, which only returns non-deactivated users because machines are also considered as users by AD: ``(&(objectClass=user)(objectCategory=person)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))``
 
-    Note that this filter is automaticaly added when the Active Directory pre-configuration model is selected.
+    Note that this filter is automatically added when the Active Directory pre-configuration model is selected.
 
 * **Identifier field**: name of the field in the LDAP directory corresponding to the user's identifier, for example, ``uid`` on an LDAP directory, ``samaccountname`` on an AD directory
 * **Synchronization field**: name of the field used for synchronization. This field must uniquely identify the user, making it possible to take into account a change of login, for example ``employeeuid`` on an LDAP or ``objectguid`` for an AD
@@ -85,89 +85,98 @@ Base DN and authenticated user
    * ``cn=Admin, ou=users, dc=mycompany`` is incorrect
    * ``cn=Admin,ou=users,dc=mycompany`` is correct
 
-Pour Active Directory, si on utilise le ``userprincipalname`` au lieu du ``samaccountname`` on peut avoir un ``rootdn`` sous la forme ``prenom.nom@domaine.fr``.
+For Active Directory, if the ``userprincipalname`` is used instead of the ``samaccountname``, the ``rootdn`` can be under the form ``prenom.nom@domaine.fr``.
 
-Les paramètres à entrer sont très simples, par exemple :
+Parameters to be entered are simple, as in:
 
-* hôte : `ldap.mycompany.fr`
-* basedn : `dc=mycompany,dc=fr`
+* host: ``ldap.mycompany.fr``
+* basedn: ``dc=mycompany,dc=fr``
 
-Et cela doit suffire si la recherche anonyme est permise. Dans le cas contraire, et si tous les utilisateurs ne sont pas positionnés au sein du même DN, il vous faut spécifier le DN d'un utilisateur autorisé et son mot de passe : rootdn/Pass. Pour Active Directory, il est obligatoire de renseigner un compte qui a le droit de s'authentifier sur le domaine.
+This should be enough if anonymous search is allowed. Otherwise, and if all the users are not positioned within the same DN, you must specify the DN of an authorized user and his password: rootdn/Pass. For Active Directory, it is mandatory to enter an account that has the right to authenticate on the domain.
 
-En tentant de se connecter à l'annuaire grâce à un browser LDAP, il est possible de tester ces paramètres. Il en existe beaucoup, mais on peut citer :
+By attempting to connect to the directory using an LDAP browser, it is possible to test these parameters. There are many LDAP browser, but the following can be mentioned:
 
-* *LdapBrowser Editor* (logiciel libre écrit en Java, et donc multi-plateforme)
-* *ADSIedit* pour Active Directory. Cet outil se trouve sur les supports tools/outils supplémentaires du CD d'installation de Windows Server.
+* *LdapBrowser Editor*: free software written in Java and therefore multi-platform
+* *ADSIedit* for Active Directory: this tool can be found in support tools of the Windows Server installation CD.
 
 .. note::
 
-   Si certains des utilisateurs ont des restrictions de connexion à certaines machines configurées dans leur profil AD, l'erreur suivante est possible lors d'une tentative de login sur la page d'accueil de GLPI : **Utilisateur non trouvé ou plusieurs utilisateurs identiques trouvés**. La solution consiste à ajouter le serveur hébergeant l'AD à la liste des PC sur lesquels l'utilisateur peut se connecter.
+   If some of the users have connection restrictions to certain machines configured in their AD profile, the following error is possible when trying to login on the GLPI home page: **User not found or several identical users found**. The solution is to add the server hosting the AD to the list of machines the user can connect to.
 
 Test
 ~~~~
 
-Permet de tester la configuration définie dans l'onglet Annuaire LDAP.
+Allows to test the configuration defined in the LDAP Directory tab.
 
-Le message **Test de connexion réussi** indique que GLPI a pu se connecter à l'annuaire LDAP avec les informations renseignées (hôte, port, compte utilisateur).
+The message **Connection test succeeded** indicates that GLPI was able to connect to the LDAP directory with the information provided (host, port, user account).
 
-Il reste désormais à importer les utilisateurs. Pour cela, il faut bien vérifier les autres paramètres (filtre de connexion, champs de login, etc).
+Next task is users import. Before performing it, the other parameters (connection filter, login field...) must be carefully checked.
 
 Users
 ~~~~~
 
-Permet de configurer comment va être effectué le lien entre les champs de l'annuaire et ceux de GLPI. Pour chaque champ de GLPI (nom, prénom, image...) est associé un champ de l'annuaire.
+Allows to configure how the link will be made between the fields of the directory and those of GLPI. For each GLPI field (name, first name, picture, etc.) a field from the directory is associated.
 
-.. image:: /modules/configuration/images/ldap-users.png
-   :alt: Configuration LDAP des utilisateurs
+.. figure:: /modules/configuration/images/ldap-users.png
+   :alt: Users LDAP configuration
    :align: center
    :scale: 50%
+
+   Users LDAP configuration
 
 Groups
 ~~~~~~
 
-Permet de configurer la méthode de stockage des groupes au niveau de l'annuaire.
+Allows to configure the group storage method at the directory level.
 
 .. image:: /modules/configuration/images/ldap-groups.png
-   :alt: Configuration LDAP des groupes
+   :alt: Groups LDAP Configuration
    :align: center
    :scale: 50%
+
+   Groups LDAP Configuration
 
 Advanced information
 ~~~~~~~~~~~~~~~~~~~~
 
-.. image:: /modules/configuration/images/ldap-users.png
-   :alt: Configuration LDAP des utilisateurs
+.. figure:: /modules/configuration/images/ldap-users.png
+   :alt: Users LDAP configuration
    :align: center
    :scale: 50%
 
-Dans le cas où l'heure de la machine hébergeant l'annuaire LDAP n'est pas dans le même fuseau horaire que celui de GLPI, il faut modifier la variable **Fuseau horaire** afin d'ajuster le délai : en effet, cela peut provoquer des résultats erronés dans la liste des utilisateurs à synchroniser.
+   Users LDAP configuration
+
+If the time of the machine hosting the LDAP directory is not in the same time zone as the machine hosting GLPI, the **Time zone** variable must be modified in order to adjust the delay: otherwise, this can cause erroneous results in the list of users to synchronize.
 
 Secure LDAP connection
 ``````````````````````
 
-GLPI gère la connexion sécurisée à un annuaire LDAP à travers une connexion SSL (aussi appelé LDAPS). Il suffit de rajouter devant le nom de l'hôte (ou son IP) *ldaps://*. Ainsi que de changer le port (par défaut 636). Par exemple l'accès en LDAPS en local donnera : *Hôte : ldaps://127.0.0.1 Port : 636*
+GLPI manages secure connection to an LDAP directory through an SSL connection, also called LDAPS. It is enough to add in front of the host name or its IP ``ldaps://`` as well as changing the port (default 636). For example, local LDAPS access will be: 
+
+* Host: ``ldaps://127.0.0.1`` 
+* Port: ``636``
 
 Limit on the number of returned records (sizelimit)
 ```````````````````````````````````````````````````
 
-Il existe souvent deux limites sur le nombre maximum d'enregistrements retournés par une requête LDAP :
+There are often two limits on the maximum number of records returned by an LDAP query:
 
-* la limite du client (définie par exemple sur Debian/Ubuntu dans ``/etc/ldap/ldap.conf``)
-* la limite imposée par le serveur : si la limite définie par le client est supérieure à la limite serveur, c'est cette dernière qui prend le dessus.
+* the client limit, defined for example on Debian/Ubuntu in ``/etc/ldap/ldap.conf``
+* the limit imposed by the server: if the limit defined by the client is greater than the server limit, the latter takes precedence
 
 .. warning::
 
-   Si la limite est atteinte l'option de comportement lors de la suppression d'un utilisateur de l'annuaire ne peut fonctionner. De plus, GLPI affichera un message d'avertissement lors d'un import ou d'une synchronisation.
+   If the limit is reached the behavior option when deleting a user from the directory may not work. In addition, GLPI will display a warning message during an import or a synchronization.
 
-Avec PHP 5.4 ou supérieur, il est désormais possible de contourner la limitation du sizelimit en activant, dans l'onglet *Informations avancées*, la **pagination des résultats**. Dans ce mode, PHP va requêter l'annuaire autant de fois que nécessaire et par tranche de X résultats jusqu'à ce que l'ensemble des enregistrements soient renvoyés.
+With PHP 5.4 or higher, it is now possible to bypass the sizelimit limitation by activating, in the *Advanced information* tab, the **pagination of results**. In this mode, PHP will query the directory as many times as necessary and in slices of X results until all the records are returned.
 
-L'option **Taille des pages** permet d'ajuster cette valeur de même que **nombre maximum de résultats** définit la limite d'enregistrement à ne pas dépasser lors d'une requête LDAP (afin par exemple d'éviter une erreur indiquant que PHP demande plus de mémoire que ce qui lui est alloué).
+The option **Size of pages** is used to adjust this value as well as **maximum number of results** which defines the records limit not to be exceeded during an LDAP request, in order for example to avoid an error indicating that PHP is asking for more memory than what is allocated to it.
 
 .. note::
 
-   Sur un annuaire OpenLDAP la limite par défaut est à 500 enregistrements, sur un Active Directory elle est de 1000.
+   On an OpenLDAP directory the default limit is 500 records, on an Active Directory it is 1000.
 
-   Sur un Active directory il est possible de modifier la valeur du `MaxPageSize` grâce aux commandes suivantes (attention cette modification est globale à tout l'annuaire) :
+   On an Active directory it is possible to modify the value of the ``MaxPageSize`` using the following commands (beware that this modification is global to the entire directory):
 
    .. code-block::
 
