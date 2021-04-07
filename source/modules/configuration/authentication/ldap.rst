@@ -1,105 +1,100 @@
 Annuaires LDAP
 ==============
 
-GLPI s'interface avec un (ou plusieurs) :term:`Annuaire LDAP` afin d'authentifier les utilisateurs, de contrôler leur accès, de récupérer leurs informations personnelles et d'importer des groupes.
+GLPI interfaces with LDAP directories in order to authenticate users, control their access, retrieve their personal information and import groups.
 
-Tous les annuaires compatibles LDAP v3 sont supportés par GLPI. C'est donc aussi le cas pour l':term:`Annuaire Active Directory` de Microsoft. Il n'y a pas de limite quant au nombre d'annuaires renseignés : bien entendu plus le nombre est élevé, plus la recherche d'un nouvel utilisateur à authentifier peut être longue.
+All directories compatible with LDAP V3 are supported by GLPI, which includes therefore Microsoft `Active Directory`.
 
-Il est possible d'importer et de synchroniser les utilisateurs de 2 manières :
+There is no limit (except performance) to the number of configured LDAP directories.
 
-* au fil de l'eau : à la première connexion, l'utilisateur est créé dans GLPI. A chaque login, ses informations personnelles sont synchronisées avec l'annuaire. Dans le cas où les collecteurs sont utilisés, une adresse de messagerie inconnue sera recherchée dans l'annuaire pour créer l'utilisateur associé ;
-* en masse : soit via l'interface web de GLPI, soit en utilisant le script fourni ; voir [Importer et synchroniser depuis un annuaire par script](scripts_ldap_mass_sync.html "Un script permet l'import et la synchronisation à partir d'un annuaire.").
+It is possible to import and synchronize users in 2 ways:
+
+* on the fly: at the first connection, the user is created in GLPI. At each login, user's personal information is synchronized with the directory. If collectors are used, an unknown e-mail address will be looked for in the directory to create the associated user
+* in bulk: either via the GLPI web interface, or by using the script provided (see :doc:`Import and synchronize from a directory using script </scripts_ldap_mass_sync>`)
 
 .. warning::
 
-   Si aucune configuration LDAP n'est visible (voir un message d'erreur sur cette partie) c'est que le module LDAP pour PHP n'est pas installé. 
+   LDAP module for PHP must be installed first: 
 
-   Sous Linux, installer le paquet ldap pour PHP (par exemple *php5-ldap* sur Debian), puis redémarrer le serveur web.
+   * on Linux, install the ldap package for PHP (for example `` php5-ldap`` on Debian), then restart the web server
+   * on Windows, edit file ``php.ini`` located in directory ``apache/bin`` and uncomment line ``extension=php_ldap.dll``, then restart the web server
 
-   Sous Windows il faut décommenter dans le fichier *php.ini* (fichier présent dans le répertoire *apache/bin*) la ligne *extension=php\_ldap.dll* puis redémarrer le serveur web.
+The user authentication process is divided into 3 parts: authentication, access control and finally the import of personal data.
 
-Le processus d'authentification des utilisateurs est découpé en 3 parties : l'authentification, le contrôle d'accès et enfin la récupération des données personnelles.
+LDAP authentication
+-------------------
 
-Authentification LDAP
----------------------
+When the user logs in for the first time, GLPI will connect to all the directories until it finds the one that contains the user. If the option allowing users to be imported from an external source is active, then the user is created and the identifier of the connection method and the LDAP server are stored in the database.
 
-Lors de la première connexion de l'utilisateur, GLPI va s'adresser à tous les annuaires jusqu'à trouver celui qui contient l'utilisateur. Si l'option permettant d'importer des utilisateurs depuis une source externe est active, alors celui-ci est créé et l'identifiant de la méthode de connexion et le serveur LDAP sont stockés en base de données.
+Then, at each login, the user is authenticated on the directory whose identifier is stored in GLPI database. The other directories are not used: if a user is deactivated in the directory that was used until then to connect, user cannot connect with another authentication source.
 
-Ensuite, à chaque login l'utilisateur est authentifié sur l'annuaire dont l'identifiant est stocké dans GLPI. Les autres annuaires ne sont pas utilisés : si un utilisateur est désactivé dans l'annuaire qu'il a utilisé jusque là pour se connecter, il ne peut se connecter avec une autre source d'authentification.
+Access control
+--------------
 
-Contrôle d'accès
-----------------
-
-Le contrôle d'accès est l'attribution d'habilitations à un utilisateur.
-Même si un utilisateur est authentifié sur un annuaire il n'est pas forcément habilité à se connecter à GLPI.
-
-Ce mécanisme repose sur l'utilisation de règles d'affectations d'habilitations.
+Access control is the granting of authorizations to a user. Even if a user is authenticated using a directory, user is not necessarily authorized to connect to GLPI. This mechanism is based on the use of authorization assignment rules.
 
 The different tabs
 ------------------
 
-Annuaire LDAP
-~~~~~~~~~~~~~
+LDAP Directory
+~~~~~~~~~~~~~~
 
-.. image:: /modules/configuration/images/ldap.png
-   :alt: Annuaire LDAP
+.. figure:: /modules/configuration/images/ldap.png
+   :alt: LDAP directory
    :align: center
    :scale: 50%
 
-.. note::
-
-   Il existe un modèle de pré-configuration Active Directory, qui pré-remplit un certain nombre de champs. Celui-ci a été mis en place afin de faciliter la configuration GLPI-AD.
-
-   Pour le charger, cliquer sur le lien **Active Directory** lors de l'ajout d'un annuaire. Le lien **Valeur(s) par défaut** réinitialise la saisie.
-
-* **serveur par défaut** : si vous avez plusieurs serveurs LDAP de paramétrés, vous ne pouvez définir qu'un seul serveur par défaut. Le fait de choisir ce paramètre le supprime du serveur sur lequel il était précédemment paramétré ;
-* **serveur** et **port** : représentant  l'adresse de l'annuaire LDAP ;
-* **basedn** : emplacement de l'annuaire à partir duquel les recherches et lectures seront effectuées ;
+   LDAP directory
 
 .. note::
 
-   Le `basedn` doit être renseigné sous la forme du DN complet de l'utilisateur. Par exemple ``CN=glpiadmin,DC=mondomaine`` si le compte dans l'annuaire pour GLPI est `glpiadmin`.
+   There is an Active Directory pre-configuration template which pre-fills some fields in order to facilitate GLPI Active Directory configuration. To load it, click on the link **Active Directory** when adding a directory. The link **Default value(s)** resets the entry.
 
-* **DN du compte** : identifiant de connexion à l'annuaire LDAP (dans le cas d'un accès non anonyme) ;
-* **Mot de passe du compte** : mot de passe correspondant (dans le cas d'un accès non anonyme). Il est possible d'effacer le mot de passe en cochant la case **effacer** puis de valider ;
-* **filtre de connexion** : permet de restreindre la recherche de personnes dans l'annuaire. Par exemple, si seul un ensemble restreint de personnes de l'annuaire ont le droit de se connecter à GLPI, il faut mettre en place une condition pour restreindre la recherche à ces personnes.
+* **default server**: makes this server the default one; only one default server can be defined, therefore if a default server was previously defined, defining a new default server will erase the previous one
+* **server** and **port**: the address of the LDAP directory
+* **basedn**: location of the directory from which searches and reads will be made
 
-   On peut citer les exemples de filtres suivants :
+   .. note::
 
-   * un filtre classique LDAP peut être : ``(objectclass=inetOrgPerson)``
-   * pour Active Directory utiliser le filtre suivant, qui ne renvoie que les utilisateurs non désactivés (car les machines sont aussi  considérées comme des utilisateurs par AD) : ``(&(objectClass=user)(objectCategory=person)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))``
+      The ``basedn`` must be entered in the form of the user's full DN. For example ``CN=glpiadmin, DC=mydomain`` if the account in the directory for GLPI is ``glpiadmin``.
 
-    Il faut noter que ce filtre est automatiquement rempli lorsque le modèle de pré-configuration Active Directory est sélectionné.
+* **account DN**: LDAP directory connection identifier, in the case of non-anonymous access
+* **Account Password**: corresponding password, in the case of non-anonymous access. It is possible to erase the password by checking the **erase** box then validating
+* **connection filter**: allows to restrict the search for people in the directory. For example, if only a restricted set of people in the directory have the right to connect to GLPI, a condition must be put in place in order to restrict the search to these people.
 
-* **Champ de l'identifiant** : nom du champ dans l'annuaire LDAP correspondant à l'identifiant de l'utilisateur (par exemple, ``uid`` sur un annuaire LDAP, ``samaccountname`` sur un annuaire AD) ;
-* **Champ de synchronisation** : nom du champ utilisé pour la synchronisation. Ce champ doit identifier de manière unique l'utilisateur, il permet de prendre en compte le cangement de login (par exemple ``employeeuid`` sur un LDAP ou ``objectguid`` pour un AD).
+  Some filter examples:
+
+  * a classic LDAP filter can be: ``(objectclass=inetOrgPerson)``
+     
+  * for Active Directory use the following filter, which only returns non-deactivated users because machines are also considered as users by AD: ``(&(objectClass=user)(objectCategory=person)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))``
+
+    Note that this filter is automaticaly added when the Active Directory pre-configuration model is selected.
+
+* **Identifier field**: name of the field in the LDAP directory corresponding to the user's identifier, for example, ``uid`` on an LDAP directory, ``samaccountname`` on an AD directory
+* **Synchronization field**: name of the field used for synchronization. This field must uniquely identify the user, making it possible to take into account a change of login, for example ``employeeuid`` on an LDAP or ``objectguid`` for an AD
 
 .. warning::
 
-   Ne pas oublier d'activer votre annuaire et de le définir l'annuaire par défaut si vous avez plusieurs annuaires
+   Do not forget to activate the directory and to define a default directory if several directories are configured
 
-**Base DN et utilisateur authentifié**
+Base DN and authenticated user
+``````````````````````````````
+.. warning:: 
+   The ``rootdn`` and the ``basedn`` must **not** contain spaces after commas. In addition, uppercase/lowercase is important. For example:
 
-Attention, le *rootdn* et le *basedn* doivent être écrits sans espaces après les virgules. De plus, la casse est importante.
+   * ``cn=Admin, ou=users, dc=mycompany`` is incorrect
+   * ``cn=Admin,ou=users,dc=mycompany`` is correct
 
-Exemple de rootdn :
-
-* ``cn=Admin, ou=users, dc=mycompany`` : incorrect
-* ``cn=Admin,ou=users,dc=mycompany`` : correct
-
-Pour Active Directory, si on utilise le `userprincipalname` au lieu du `samaccountname` on peut avoir un `rootdn` sous la forme `prenom.nom@domaine.fr`.
+Pour Active Directory, si on utilise le ``userprincipalname`` au lieu du ``samaccountname`` on peut avoir un ``rootdn`` sous la forme ``prenom.nom@domaine.fr``.
 
 Les paramètres à entrer sont très simples, par exemple :
 
 * hôte : `ldap.mycompany.fr`
 * basedn : `dc=mycompany,dc=fr`
 
-Et cela doit suffire si la recherche anonyme est permise. Dans le cas contraire, et si tous les utilisateurs ne sont pas positionnés au sein
-du même DN, il vous faut spécifier le DN d'un utilisateur autorisé et son mot de passe : rootdn/Pass. Pour Active Directory, il est
-obligatoire de renseigner un compte qui a le droit de s'authentifier sur le domaine.
+Et cela doit suffire si la recherche anonyme est permise. Dans le cas contraire, et si tous les utilisateurs ne sont pas positionnés au sein du même DN, il vous faut spécifier le DN d'un utilisateur autorisé et son mot de passe : rootdn/Pass. Pour Active Directory, il est obligatoire de renseigner un compte qui a le droit de s'authentifier sur le domaine.
 
-En tentant de se connecter à l'annuaire grâce à un browser LDAP, il est possible de tester ces paramètres. Il en existe beaucoup, mais on peut
-citer :
+En tentant de se connecter à l'annuaire grâce à un browser LDAP, il est possible de tester ces paramètres. Il en existe beaucoup, mais on peut citer :
 
 * *LdapBrowser Editor* (logiciel libre écrit en Java, et donc multi-plateforme)
 * *ADSIedit* pour Active Directory. Cet outil se trouve sur les supports tools/outils supplémentaires du CD d'installation de Windows Server.
@@ -108,8 +103,8 @@ citer :
 
    Si certains des utilisateurs ont des restrictions de connexion à certaines machines configurées dans leur profil AD, l'erreur suivante est possible lors d'une tentative de login sur la page d'accueil de GLPI : **Utilisateur non trouvé ou plusieurs utilisateurs identiques trouvés**. La solution consiste à ajouter le serveur hébergeant l'AD à la liste des PC sur lesquels l'utilisateur peut se connecter.
 
-Tester
-~~~~~~
+Test
+~~~~
 
 Permet de tester la configuration définie dans l'onglet Annuaire LDAP.
 
@@ -117,8 +112,8 @@ Le message **Test de connexion réussi** indique que GLPI a pu se connecter à l
 
 Il reste désormais à importer les utilisateurs. Pour cela, il faut bien vérifier les autres paramètres (filtre de connexion, champs de login, etc).
 
-Utilisateurs
-~~~~~~~~~~~~
+Users
+~~~~~
 
 Permet de configurer comment va être effectué le lien entre les champs de l'annuaire et ceux de GLPI. Pour chaque champ de GLPI (nom, prénom, image...) est associé un champ de l'annuaire.
 
@@ -127,8 +122,8 @@ Permet de configurer comment va être effectué le lien entre les champs de l'an
    :align: center
    :scale: 50%
 
-Groupes
-~~~~~~~
+Groups
+~~~~~~
 
 Permet de configurer la méthode de stockage des groupes au niveau de l'annuaire.
 
@@ -137,32 +132,25 @@ Permet de configurer la méthode de stockage des groupes au niveau de l'annuaire
    :align: center
    :scale: 50%
 
-Informations avancées
-~~~~~~~~~~~~~~~~~~~~~
+Advanced information
+~~~~~~~~~~~~~~~~~~~~
 
 .. image:: /modules/configuration/images/ldap-users.png
    :alt: Configuration LDAP des utilisateurs
    :align: center
    :scale: 50%
 
-Dans le cas où l'heure de la machine hébergeant l'annuaire LDAP n'est
-pas dans le même fuseau horaire que celui de GLPI, il faut modifier la
-variable **Fuseau horaire** afin d'ajuster le délai : en effet, cela
-peut provoquer des résultats erronés dans la liste des utilisateurs à
-synchroniser.
+Dans le cas où l'heure de la machine hébergeant l'annuaire LDAP n'est pas dans le même fuseau horaire que celui de GLPI, il faut modifier la variable **Fuseau horaire** afin d'ajuster le délai : en effet, cela peut provoquer des résultats erronés dans la liste des utilisateurs à synchroniser.
 
-**Connexion LDAP sécurisée**
+Secure LDAP connection
+``````````````````````
 
-GLPI gère la connexion sécurisée à un annuaire LDAP à travers une
-connexion SSL (aussi appelé LDAPS). Il suffit de rajouter devant le nom
-de l'hôte (ou son IP) *ldaps://*. Ainsi que de changer le port (par
-défaut 636). Par exemple l'accès en LDAPS en local donnera : *Hôte :
-ldaps://127.0.0.1 Port : 636*
+GLPI gère la connexion sécurisée à un annuaire LDAP à travers une connexion SSL (aussi appelé LDAPS). Il suffit de rajouter devant le nom de l'hôte (ou son IP) *ldaps://*. Ainsi que de changer le port (par défaut 636). Par exemple l'accès en LDAPS en local donnera : *Hôte : ldaps://127.0.0.1 Port : 636*
 
-**Limite du nombre d'enregistrement retournés (sizelimit)**
+Limit on the number of returned records (sizelimit)
+```````````````````````````````````````````````````
 
-Il existe souvent deux limites sur le nombre maximum d'enregistrements
-retournés par une requête LDAP :
+Il existe souvent deux limites sur le nombre maximum d'enregistrements retournés par une requête LDAP :
 
 * la limite du client (définie par exemple sur Debian/Ubuntu dans ``/etc/ldap/ldap.conf``)
 * la limite imposée par le serveur : si la limite définie par le client est supérieure à la limite serveur, c'est cette dernière qui prend le dessus.
@@ -171,13 +159,9 @@ retournés par une requête LDAP :
 
    Si la limite est atteinte l'option de comportement lors de la suppression d'un utilisateur de l'annuaire ne peut fonctionner. De plus, GLPI affichera un message d'avertissement lors d'un import ou d'une synchronisation.
 
-Avec PHP 5.4 ou supérieur, il est désormais possible de contourner la limitation du sizelimit en activant, dans l'onglet *Informations
-avancées*, la **pagination des résultats**. Dans ce mode, PHP va requêter l'annuaire autant de fois que nécessaire et par tranche de X
-résultats jusqu'à ce que l'ensemble des enregistrements soient renvoyés.
+Avec PHP 5.4 ou supérieur, il est désormais possible de contourner la limitation du sizelimit en activant, dans l'onglet *Informations avancées*, la **pagination des résultats**. Dans ce mode, PHP va requêter l'annuaire autant de fois que nécessaire et par tranche de X résultats jusqu'à ce que l'ensemble des enregistrements soient renvoyés.
 
-L'option **Taille des pages** permet d'ajuster cette valeur de même que **nombre maximum de résultats** définit la limite d'enregistrement à ne
-pas dépasser lors d'une requête LDAP (afin par exemple d'éviter une erreur indiquant que PHP demande plus de mémoire que ce qui lui est
-alloué).
+L'option **Taille des pages** permet d'ajuster cette valeur de même que **nombre maximum de résultats** définit la limite d'enregistrement à ne pas dépasser lors d'une requête LDAP (afin par exemple d'éviter une erreur indiquant que PHP demande plus de mémoire que ce qui lui est alloué).
 
 .. note::
 
@@ -198,14 +182,12 @@ alloué).
       ldap policy : q
       ntdsutil : q
 
-Réplicats
-~~~~~~~~~
+Replicates
+~~~~~~~~~~
 
-Si un annuaire LDAP n'est pas accessible, les utilisateurs ne pourront plus se connecter à GLPI.
+If a LDAP directory is not accessible, users will no longer be able to connect to GLPI. In order to avoid this situation, replicates can be declared: they share the same configuration as the server they are replicating, but are available at a different address.
 
-Afin d'éviter cette situation, des réplicats peuvent être déclarés : ils partagent la même configuration que le serveur qu'ils répliquent, mais sont disponibles à une adresse différente.
-
-L'utilisation des réplicats se fait uniquement dans le cas d'une perte de connexion à l'annuaire maître. L'ajout de réplicats se fait dans la fiche d'un annuaire, en renseignant un **nom** qui sera affiché dans GLPI, ainsi qu'un **nom d'hôte** et un **port**. Il n'y a pas de limite quant au nombre d'annuaires répliqués.
+Replicates are used only in the event of a loss of connection to the master directory. Replicates are added on the directory form, by entering a **name** which will be displayed in GLPI, as well as a **host name** and a **port**. There is no limit to the number of directories replicated.
 
 .. include:: ../../tabs/historical.rst
 
@@ -214,4 +196,4 @@ L'utilisation des réplicats se fait uniquement dans le cas d'une perte de conne
 The different actions
 ---------------------
 
-Les annuaires LDAP ne proposent pas d'actions spécifiques, se reporter aux :doc:`actions communes </modules/overview/actions>`.
+LDAP directories do not have specific actions, refer to :doc:`common actions</modules/overview/actions>`.
