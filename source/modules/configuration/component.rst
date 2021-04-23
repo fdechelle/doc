@@ -1,69 +1,72 @@
-Configurer les composants
-=========================
+Configure components
+====================
 
-Les composants ajoutés aux ordinateurs sont paramétrables.
+The components added to the computers can be configured.
 
-Un composant matériel est défini par un type, un nom, un fabricant, un commentaire, ainsi que plusieurs champs spécifiques au type de composant. Par exemple, pour une carte mère, on pourra y renseigner le chipset.
+A hardware component is defined by a type, a name, a manufacturer, a comment as well as several fields specific to the type of the component. For example, for a motherboard, chipset can be entered there.
 
-La liste des différents types de composant est fixe :
+The list of the different types of component is fixed:
 
-.. image:: images/component_dropdown.png
-   :alt: Liste des types de composant
+.. figure:: images/component_dropdown.png
+   :alt: List of component types
    :align: center
 
-.. note:: Il est possible de renseigner d'autres types de composants à l'intérieur du type *Autres composants*.  Il n'est cependant pas possible d'ajouter d'autres types que ceux listés ici.
+   List of component types
+	   
+.. note:: It is possible to enter other types of components inside the *Other components* type. However, it is not possible to add other types than those listed here.
 
-Une fois un type de composant sélectionné (*Carte mère*, *Processeur*...), on accède automatiquement à la liste des composants déjà enregistrés.
+Once a component type has been selected (*Motherboard*, *Processor* ...), the list of already registered components is automatically accessed.
 
-.. image:: images/component_list.png
-   :alt: Liste des composants
+.. figure:: images/component_list.png
+   :alt: List of components
    :align: center
+
+   List of components
 
 The different tabs
 ------------------
 
-Principal
-~~~~~~~~~
+Main
+~~~~
 
-Informations qui définissent un composant matériel (informations différentes en fonction du type de composant).
+Information that defines a hardware component, depending on the type of component.
 
 .. figure:: images/component_details.png
-   :alt: Détail d'un composant de type processeur
+   :alt: Detail of a processor type component
    :align: center
 
-   Exemple pour un Processeur
+   Detail of a processor type component
 
 
-Éléments
+Elements
 ~~~~~~~~
 
-L'onglet éléments permet de visualiser les ordinateurs liés au composant :
+This tab allows to display computers linked to the component. 
 
-Les informations suivantes seront affichés :
+The following information will be displayed:
 
-* Nom de l'ordinateur
-* La fréquence pour cet ordinateur
-* Le nombre de coeurs pour cet ordinateur
-* Le nombre de thread pour cet ordinateur
+* Computer name
+* Frequency for this computer
+* Number of cores for this computer
+* Number of threads for this computer
 
-.. image:: images/component_elements.png
-   :alt: Élément d'un composant
+.. figure:: images/component_elements.png
+   :alt: Element of a component
    :align: center
 
+   Element of a component
+
 .. note::
+   It is possible to modify the characteristics of a component only for the linked element.
 
-   -  **Il est possible de modifier les caractéristiques d'un composant uniquement pour l'élément lié**
+   From the *Elements* tab of the component, click on the **Update** link. Several tabs are then proposed:
 
-      Depuis l'onglet *Eléments* du composant, cliquer sur le lien **Mettre à jour**.
-
-      Plusieurs onglet sont alors proposés :
-
-      * Onglet "Elément - Lien nom du composant" : liste les caractéristiques de ce composant.
-      * :doc:`Onglet "Gestion" </modules/tabs/management>`: gérer les informations financières et administratives.
-      * :doc:`Onglet "Documents" </modules/tabs/documents>`
-      * :doc:`Onglet "Historique" </modules/tabs/historical>`
-      * :doc:`Onglet "Debug" </modules/tabs/debug>` : uniquement si vous êtes connecté en mode Debug.
-      * :doc:`Onglet "Tous" </modules/tabs/all>` : pour un élément, toutes les informations sont affichées sur une seule page.
+   * "Element - Component name link" tab: list the characteristics of this component
+   * :doc:`Tab "Management" </modules/tabs/management>`: manage financial and administrative information
+   * :doc:`Tab "Documents" </modules/tabs/documents>`
+   * :doc:`Tab "Historical" </modules/tabs/historical>`
+   * :doc:`Tab "Debug" </modules/tabs/debug>`: only if you are connected in *Debug* mode
+   * :doc:`Tab "All" </modules/tabs/all>`: for an element, all information is displayed on one page
 
 .. include:: ../tabs/documents.rst
 

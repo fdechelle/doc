@@ -129,7 +129,7 @@ Groups
 
 Allows to configure the group storage method at the directory level.
 
-.. image:: /modules/configuration/images/ldap-groups.png
+.. figure:: /modules/configuration/images/ldap-groups.png
    :alt: Groups LDAP Configuration
    :align: center
    :scale: 50%

@@ -7,7 +7,7 @@ General configuration
    asset
    assistance
    centralparameter
-   defaulvalue
+   defaultvalue
    generalconfiguration
    mysqlreplicate
    system
