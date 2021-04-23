@@ -1,47 +1,47 @@
-Configurer les liens externes protocolés
-========================================
+Configure protocoled external links
+===================================
 
-Les liens externes se configurent depuis le menu Configuration > Liens externes
+External links are configured from the *Configuration> External links* menu.
 
-Certains éléments de GLPI peuvent être associés à un ensemble de liens vers des applications externes. Ceux-ci sont visibles depuis l'onglet ``Liens`` des différentes fiches.
+Some items of GLPI can be associated with a set of links to external applications. These are visible from the *Links* tab of the different forms.
 
-Pour paramétrer un lien, il est possible d'utiliser des tags particuliers qui seront remplacés par les valeurs de l'élément. Les Tags valides sont :
+To configure a link, it is possible to use specific tags which will be replaced by the values ​​of the item. Valid tags are:
 
-* ``[LOGIN]``: identifiant de l'utilisateur ;
-* ``[ID]``: identifiant interne numérique de l'objet ;
-* ``[NAME]``: nom de l'objet ;
-* ``[LOCATION]``: lieu de l'objet ;
-* ``[LOCATIONID]``: identifiant interne du lieu ;
-* ``[IP]``: adresse IP de l'objet ;
-* ``[MAC]``: adresse MAC de l'objet ;
-* ``[NETWORK]``: réseau dans lequel se trouve l'objet ;
-* ``[DOMAIN]``: domaine réseau de l'objet ;
-* ``[SERIAL]``: numéro de série ;
-* ``[OTHERSERIAL]``: numéro d'inventaire ;
-* ``[USER]``: utilisateur associé au matériel ;
-* ``[GROUP]``: groupe associé au matériel.
-* ``[FIRSTNAME]``: prénom de l'utilisateur (que pour les utilisateurs)
-* ``[REALNAME]``: nom de l'utilisateur (que pour les utilisateurs)
+* ``[LOGIN]``: user ID
+* ``[ID]``: internal numeric identifier of the object
+* ``[NAME]``: object name
+* ``[LOCATION]``: object location
+* ``[LOCATIONID]``: internal identifier of the location
+* ``[IP]``: object's IP address
+* ``[MAC]``: MAC address of the object
+* ``[NETWORK]``: network in which the object is located
+* ``[DOMAIN]``: object network domain
+* ``[SERIAL]``: serial number
+* ``[OTHERSERIAL]``: inventory number
+* ``[USER]``: user associated with the hardware
+* ``[GROUP]``: group associated with the material
+* ``[FIRSTNAME]``: user's first name (only for users)
+* ``[REALNAME]``: username (only for users)
 
-Chaque lien peut être associé à un ou plusieurs types d'élément.
+Each link can be associated with one or more types of items.
 
-Si le contenu est vide, c'est un simple lien qui sera généré. Si un contenu est présent, c'est un lien vers le téléchargement du contenu qui sera généré.
+If the content is empty, a simple link will be generated. If any content is present, a link to content download will be generated.
 
-Le lien peut être ouvert dans une nouvelle fenêtre en fonction du paramètre Ouvrir dans une nouvelle fenêtre.
+Link may be opened in a new window depending on the *Open in a new window* setting.
 
-Un Lien type web
-----------------
+Web type link
+-------------
 
-Créer un lien externe protocolé ayant pour nom : ``http://[IP]`` ; l'affecter au matériel réseau.
+To create a web type link, create a protocoled external link having as name: ``http://[IP]``; assign it to network equipment.
 
-Lien de type RDP
-----------------
+RDP type link
+-------------
 
-Pour l'accès à distance sur les ordinateurs, créer un lien externe protocolé ayant pour nom ``Accès distant.rdp`` et paramétrer le **Contenu du fichier** en y insérant le contenu d'un fichier type RDP et en remplaçant l'ip / le nom / le domaine par des TAGS type [IP], [NAME], [DOMAIN].
+For remote access to computers, create an external protocol link with the name ``Remote access.rdp'' and configure the **File content** by inserting the content of an RDP type file and replacing ip/name/domain by tags ``[IP]``, ``[NAME]``, ``[DOMAIN]``.
 
-Remarque : Dans le cas de l'utilisation de Tags provenant de ports réseaux (IP, MAC), si le matériel en possède plusieurs, alors cela créera autant de liens que de ports. Par exemple pour une machine possédant 2 adresses IP différentes, 2 liens seront affichés.
+.. note:: when using tags coming from network ports (``IP``, ``MAC``), if the equipment has more than one, then this will create as many links as there are ports. For example for a machine with 2 different IP addresses, 2 links will be displayed.
 
-Prise en main à distance à travers l'applet VNC
------------------------------------------------
+Remote control through the VNC applet
+-------------------------------------
 
-Certaines implémentations de VNC fournissent une applet qui permet de prendre la main sur un ordinateur à travers un navigateur. En général, le port utilisé est 5900. Le lien correspondant sera du type http://[IP]:5900 ou http://[NAME].[DOMAIN]:5900.
+Some VNC implementations provide an applet that allows you to control a computer through a browser. Usually, the port used is 5900. The corresponding link will be of the type ``http://[IP]:5900`` or ``http://[NAME].[DOMAIN]:5900``.
