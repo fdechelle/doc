@@ -1,24 +1,34 @@
-Configurer les contrôles
-========================
+Configure controls
+==================
 
-GLPI dispose d'un mécanisme permettant de réaliser des contrôles avant l'insertion en base de données d'un objet.
+GLPI has a mechanism for performing checks before inserting an object into the database.
 
-Cette fonctionnalité permet de rendre l'ajout ou la mise à jour d'un objet d'inventaire impossible si un autre possède déjà une valeur identique. Ce mécanisme s'applique sur les ajouts manuels, mais aussi sur l'import depuis une source externe comme depuis un outil d'inventaire.
+This functionality makes it impossible to add or update an item if another item already has an identical value. This mechanism applies to manual additions as well as importing from an external source such as from an inventory tool.
+
 
 The different tabs
-----------------------
+------------------
 
-* **Onglet "Unicité des champs"** L'unicité est définie par un nom, un type d'objet sur lequel elle se rapporte, une liste de champs ainsi que les actions en découlant (refus d'injection en base, envoi de notification). Le champ sous-entité permet d'indiquer si les critères d'unicité s'appliquent à tout GLPI ou seulement à l'entité dans laquelle l'unicité est créée.
+Field unicity
+~~~~~~~~~~~~~
 
-   Il faut noter que la sélection de plusieurs champs vérifie l'unicité du n-uplet et non chaque champ individuellement.
+Uniqueness is defined by a name, a type of object to which it relates, a list of fields as well as the resulting actions (refusal of database injection, sending of notification). The sub-entity field is used to indicate whether the uniqueness criteria apply to all GLPI or only to the entity in which the uniqueness is created.
 
-   Pour un ordinateur, le critère d'unicité global est le numéro de série. Si l'on tente d'enregistrer, quelque soit l'entité un autre ayant le même numéro de série, l'insertion est refusée et un message d'erreur indique l'élément déjà présent en base. Par contre, si un utilisateur insère un ordinateur sans numéro de série, alors aucune vérification sur l'unicité ne sera effectuée.
+.. note:: the selection of several fields verifies the uniqueness of the tuple and not each field individually.
 
-   Les critères ajoutés dans les listes noires seront ignorer lors du calcul d'unicité. Voir :doc:`Configurer les intitulés </modules/configuration/dropdown/general>`.
+For a computer, the overall uniqueness criterion is the serial number. If an attempt is made to register, regardless of the entity another having the same serial number, the insertion is refused and an error message indicates the element already present in the database. However, if a user inserts a computer without a serial number, then no uniqueness check will be performed.
 
-* **Onglet "Duplique"** Cet onglet liste l'ensemble des valeurs correspondant aux critères qui sont actuellement en doublon dans la base GLPI avec éventuellement pour chacune d'elles un lien vers la fiche de l'objet.
+Criteria added to blacklists will be ignored when calculating uniqueness, see :doc:`Configure dropdown</modules/configuration/dropdown/general>`.
 
-* :doc:`Onglet "Historique" </modules/tabs/historical>` L'historique est visualisé depuis l'onglet *Historique*
+Duplicate
+~~~~~~~~~
+
+This tab lists all the values ​​corresponding to the criteria which are currently duplicated in the GLPI database, possibly with a link for each of them to the item form.
+
+Historical
+~~~~~~~~~~
+
+See :doc:`Tab "Historical" </modules/tabs/historical>`
 
 .. include:: ../tabs/debug.rst
 
